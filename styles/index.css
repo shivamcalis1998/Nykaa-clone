@@ -120,3 +120,43 @@ input:focus {
 #second button {
   margin-top: -9px;
 }
+#luxury{
+  background-color: #dfe7f3;
+}
+#luxury1{
+  display: flex;
+}
+#luxury1> img{
+  width: 220px;
+  margin: auto;
+}
+#trendcast, #f1 , #f2 ,#f3{
+  display: flex;
+}
+#trendcast > div ,#f1 >div, #f2>div, #f3>div {
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+#crazy{
+  background-color: rgb(193, 241, 241);
+}
+#fl,#you{
+  display: flex;
+}
+#cate{
+  display: flex;
+}
+#fater{
+  margin-right: -30px;
+}
+#cate > div{
+  margin: auto;
+}
+
+#you >div{
+  margin: auto;
+  box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px ;
+}
+
