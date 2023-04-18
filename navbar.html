@@ -5,10 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
     <style>
+      #child1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
       #part1 {
         display: flex;
-        width: 100%;
+        width: 95%;
+        height: 70px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+      #part1 > img {
+        height: 105px;
+        width: 105px;
+      }
+      #part1 p {
+        margin-top: 45px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+      input {
+        padding: 15px;
+        font-size: 15px;
+        border: 1px solid grey;
+        border-style: none;
+        border-radius: 5px;
+        float: left;
+        width: 35%;
+        background: #f1f1f1;
+        margin-top: 32px;
+        margin-left: 80px;
+      }
+      input:focus {
+        width: 55%;
+      }
+
+      #part2 {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      #button1 {
+        background-color: #975d8f; /* Green */
+        border: none;
+        color: white;
+        width: 90px;
+        height: 50px;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        /* margin-left: -50px; */
+        font-size: 16px;
+        margin-top: 28px;
+        /* margin-right: 50px; */
+      }
+      #button1:hover {
+        background-color: #814d7a;
+      }
+      #addCart {
+        padding: 10px;
+        width: 50px;
+        height: 44px;
+        border: none;
+        background-color: white;
+        margin-top: 28px;
       }
     </style>
   </head>
@@ -26,7 +89,23 @@
           <p>Nykaa Fashion</p>
           <p>Beauty Advise</p>
         </div>
-        <div id="part2"></div>
+        <div id="part2">
+          <input
+            type="search"
+            name=""
+            id="search"
+            placeholder="Search On Nykaa"
+          />
+          <button id="button1">Sign in</button>
+          <button id="addCart" onclick="JavaScript:alert('Add items to cart')">
+            <img
+              width="20px"
+              height="20px"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcbN1GjI7YcrQP0zUEBo8jf2yb8JlqXewgdTrmEKr6ciDr-FJHPGytffa0pFFQT5irvog-IeRE5kk&usqp=CAU&ec=48665698"
+              alt="animal"
+            />
+          </button>
+        </div>
       </div>
       <div id="child2"></div>
     </div>
