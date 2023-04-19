@@ -1,0 +1,172 @@
+#parent1 {
+  width: 95%;
+  margin: auto;
+}
+#carasoul,
+#c2 {
+  display: flex;
+  height: 302px;
+}
+#carasoul > div {
+  width: 14%;
+  margin: auto;
+}
+#carasoul > div > img {
+  width: 100%;
+  height: 80%;
+}
+#c2 > div {
+  width: 100%;
+  margin: auto;
+}
+#c3 > img {
+  width: 90%;
+  border-radius: 6px;
+}
+#topbrands {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#topc1 {
+  display: flex;
+}
+#parent2 {
+  background-color: rgb(253, 227, 224);
+}
+#logo > img {
+  width: 80px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+#logo,
+#logo1 {
+  display: flex;
+}
+#logo1 > div {
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#child1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#part1 {
+  display: flex;
+  width: 95%;
+  height: 70px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+#part1 > img {
+  height: 105px;
+  width: 105px;
+}
+#part1 p {
+  margin-top: 45px;
+  font-size: 18px;
+  font-weight: 500;
+}
+input {
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-style: none;
+  border-radius: 5px;
+  float: left;
+  width: 35%;
+  background: #f1f1f1;
+  margin-top: 32px;
+  margin-left: 80px;
+}
+input:focus {
+  width: 55%;
+}
+
+#part2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+#button1 {
+  background-color: #975d8f; /* Green */
+  border: none;
+  color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 28px;
+}
+#button1:hover {
+  background-color: #814d7a;
+}
+#addCart {
+  padding: 10px;
+  width: 50px;
+  height: 44px;
+  border: none;
+  background-color: white;
+  margin-top: 28px;
+}
+
+#child2 {
+  display: flex;
+  justify-content: space-around;
+  color: teal;
+  font-size: 20px;
+}
+#child2 p a {
+  color: teal;
+  text-decoration: none;
+}
+#second button {
+  margin-top: -9px;
+}
+#luxury {
+  background-color: #dfe7f3;
+}
+#luxury1 {
+  display: flex;
+}
+#luxury1 > img {
+  width: 220px;
+  margin: auto;
+}
+#trendcast,
+#f1,
+#f2,
+#f3 {
+  display: flex;
+}
+#trendcast > div,
+#f1 > div,
+#f2 > div,
+#f3 > div {
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+#crazy {
+  background-color: rgb(193, 241, 241);
+}
+#fl,
+#you {
+  display: flex;
+}
+#cate {
+  display: flex;
+}
+#fater {
+  margin-right: -30px;
+}
+#cate > div {
+  margin: auto;
+}
+
+#you > div {
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
