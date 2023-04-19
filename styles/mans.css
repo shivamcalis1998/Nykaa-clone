@@ -1,0 +1,28 @@
+#grid-div{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+ 
+}
+ #grid-div img{
+    width: 100%;
+    
+}
+
+ .h11{
+    text-align: center;
+    margin-top: 40px;
+ }
+#category{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+ 
