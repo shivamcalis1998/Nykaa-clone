@@ -1,0 +1,149 @@
+#child1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 30px;
+}
+#part1 {
+  display: flex;
+  width: 95%;
+  height: 70px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+#part1 > img {
+  height: 105px;
+  width: 105px;
+}
+#part1 p {
+  margin-top: 45px;
+  font-size: 18px;
+  font-weight: 500;
+}
+input {
+  padding: 15px;
+  font-size: 15px;
+  border: 1px solid grey;
+  border-style: none;
+  border-radius: 5px;
+  float: left;
+  width: 35%;
+  background: #f1f1f1;
+  margin-top: 32px;
+  margin-left: 80px;
+}
+input:focus {
+  width: 55%;
+}
+
+#part2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 150px;
+}
+#button1 {
+  background-color: #975d8f; /* Green */
+  border: none;
+  color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 28px;
+}
+#button1:hover {
+  background-color: #814d7a;
+}
+#addCart {
+  padding: 10px;
+  width: 50px;
+  height: 44px;
+  border: none;
+  background-color: white;
+  margin-top: 28px;
+}
+
+#child2 {
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+}
+#child2 button {
+  margin-top: -9px;
+  margin-right: 35px;
+}
+
+nav {
+  height: 65px;
+  line-height: 58px;
+}
+
+.nav-links {
+  list-style: none;
+  display: inline-flex;
+}
+
+.nav-links li {
+  margin-left: 0px;
+  text-decoration: none;
+}
+.nav-links li a {
+  padding: 0px 15px;
+  text-decoration: none;
+  color: teal;
+}
+.nav-links li a:hover {
+  color: rgb(245, 9, 154);
+  font-size: larger;
+  transition: all 0.3s ease;
+}
+.mega-box {
+  position: absolute;
+  top: 108px;
+  width: 95%;
+  left: 30px;
+  padding: 0px 15px 0px 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-links li:hover .mega-box {
+  opacity: 1;
+  visibility: visible;
+}
+.mega-box .content {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.content .row {
+  width: calc(25% - 30px);
+}
+
+.content .row img {
+  margin-top: 50px;
+  object-fit: cover;
+}
+.content header {
+  color: rgb(206, 14, 110);
+  text-align: left;
+  margin-top: 10px;
+}
+header:hover {
+  font-size: larger;
+}
+.content .megaLinks {
+  text-decoration: none;
+  list-style: none;
+  text-align: left;
+}
+.content .megaLinks li {
+  margin: -35px;
+}
+
+.row .megaLinks li a {
+  padding: 0px 0px;
+  display: block;
+}
