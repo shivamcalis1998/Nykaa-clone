@@ -14,11 +14,7 @@
   height: 105px;
   width: 105px;
 }
-#part1 p {
-  margin-top: 45px;
-  font-size: 18px;
-  font-weight: 500;
-}
+
 input {
   padding: 15px;
   font-size: 15px;
@@ -83,6 +79,38 @@ nav {
 .nav-links {
   list-style: none;
   display: inline-flex;
+}
+.up-links {
+  list-style: none;
+  display: inline-flex;
+}
+.up-links li {
+  margin-left: 0px;
+  text-decoration: none;
+}
+.up-links li a {
+  padding: 0px 20px;
+  text-decoration: none;
+  color: black;
+  font-size: large;
+}
+.up-links .mega-box {
+  position: absolute;
+  width: 95%;
+  left: 30px;
+  padding: 0px 15px 0px 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.up-links li a:hover {
+  color: rgb(245, 9, 154);
+  font-size: larger;
+  transition: all 0.3s ease;
+}
+
+.up-links li:hover .mega-box {
+  opacity: 1;
+  visibility: visible;
 }
 
 .nav-links li {
