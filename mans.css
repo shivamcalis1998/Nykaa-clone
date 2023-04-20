@@ -9,7 +9,7 @@ body{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 15px;
-    align-items: center;
+     
     margin-top: 20px;
  
 }
@@ -18,9 +18,10 @@ body{
     
 }
 
+
  .h11{
     text-align: center;
-    display:flexbox;
+     
     margin-top: 40px;
  }
  
@@ -267,15 +268,16 @@ body{
    
   /* for concern part */
 
+   
   .concern{
     width: 90%;
     margin: auto;
-    display: flex;
-    /* flex-direction: row; */
-     
+    display: flex;     
+      
     gap: 10px;
     margin-bottom: 90px;
   }
+  
   
   .concern img{
     width: 100%;
@@ -312,5 +314,62 @@ body{
      margin-top: -8px;
   }
 
+  @media screen and (min-width: 670px) and (max-width: 950px)  {
+    #grid-div{
+      grid-template-columns: repeat(4,1fr);
+    }
+    #grid-div h3,p{
+      font-size: 11px;
+     
+  }
+  }
+  
+  @media screen and (min-width: 400px) and (max-width: 669px)  {
+    #grid-div{
+      grid-template-columns: repeat(3,1fr);
+    }
+    #grid-div h3,p{
+      font-size: 7px;
+     
+  }
+  .concern {
+    flex-wrap: wrap;
+  }
+  .concern >div{
+    width: 15%;
+  }
+  }
+  @media screen and (min-width: 200px) and (max-width: 399px)  {
+    #grid-div{
+      grid-template-columns: repeat(2,1fr);
+    }
+    #grid-div h3,p{
+      font-size: 6px;
+     
+  }
+  .concern , .budget {
+    flex-direction: column;
+  }
+  
+  .shoph2{
+    font-size: 12px;
+  }
+ 
+   
+  }
+  @media screen  and (max-width: 199px)  {
+    #grid-div{
+      grid-template-columns: repeat(1,1fr);
+    }
+    #grid-div h3,p{
+      font-size: 4px;
+  }
+  .concern ,.budget {
+    flex-direction: column;
+  }
+  .shoph2{
+    font-size: 8px;
+  }
+  }
 
   
