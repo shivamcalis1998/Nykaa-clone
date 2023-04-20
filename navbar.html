@@ -10,6 +10,7 @@
       #child1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 30px;
       }
       #part1 {
         display: flex;
@@ -47,6 +48,7 @@
         display: flex;
         justify-content: center;
         gap: 20px;
+        margin-left: 150px;
       }
       #button1 {
         background-color: #975d8f; /* Green */
@@ -57,10 +59,8 @@
         border-radius: 10px;
         text-align: center;
         text-decoration: none;
-        /* margin-left: -50px; */
         font-size: 16px;
         margin-top: 28px;
-        /* margin-right: 50px; */
       }
       #button1:hover {
         background-color: #814d7a;
@@ -76,19 +76,73 @@
 
       #child2 {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         color: teal;
         font-size: large;
+
       }
-      #second button {
+      #child2 button {
         margin-top: -9px;
+        margin-right: 35px;
+      }
+      p {
+        font-size: large;
+      }
+      nav {
+        height: 65px;
+        line-height: 60px;
+      }
+      .nav-links {
+        text-decoration: none;
+      }
+      .nav-links {
+        list-style: none;
+        display: inline-flex; 
+      }
+
+      .nav-links li {
+        margin-left: 0px;
+        text-decoration: none;
+      }
+      .nav-links li a {
+        padding: 0px 15px;
+        text-decoration: none;
+        color: teal;
+
+      }
+      .nav-links li a:hover {
+        color: rgb(245, 9, 154);
+        font-size: larger;
+        transition: all 0.3s ease;
+      }
+      .nav-links #drop-down {
+        padding: 0 10px;
+        top: 170px;
+        line-height: 25px;
+        position:absolute;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .nav-links li:hover #drop-down  {
+       opacity: 1;
+       visibility: visible;
+       transition: all 0.5s ease;
+      }
+      #drop-down li {
+        text-decoration: none;
+        list-style: none;
+      }
+
+      #drop-down li a {
+        width: 100%;
+        display: block;
+        padding: 0 0 0 15px;
       }
     </style>
   </head>
   <body>
-    
     <div id="parent">
-      <hr style="margin-bottom: -15px" />
+      <hr style="margin-bottom: -18px" />
       <div id="child1">
         <div id="part1">
           <img
@@ -119,33 +173,41 @@
           </button>
         </div>
       </div>
-      <br />
-      <hr style="margin-top: -5px" />
+      <!-- <br /> -->
+      <hr style="margin-top: 10px" />
       <div id="child2">
-        <p>MakeUp</p>
-        <p>Skin</p>
-        <p>Hair</p>
-        <p>Applience</p>
-        <p>Bath & Body</p>
-        <p>Natural</p>
-        <p>Mom & Baby</p>
-        <p>Health & Wellness</p>
-        <p>Men</p>
-        <p>Fragnace</p>
-        <p>Pop Ups</p>
-        <div id="second">
-          <button id="addCart" onclick="JavaScript:alert('Add items to cart')">
-            <img
-              width="80px"
-              height="60px"
-              src="https://cdn.vectorstock.com/i/1000x1000/79/43/special-offer-sale-tag-discount-symbol-retail-vector-30197943.webp"
-              alt="animal"
-            />
-          </button>
-        </div>
-      </div>
+      <nav >
+        <ul class="nav-links">
+          <li>
+            <a href="#">MakeUp</a>
+            <ul id="drop-down">
+              <li><a href="#">Skin</a></li>
+              <li><a href="#">Hair</a></li>
+              <li><a href="#">Applience</a></li>
+              <li><img src="https://www.nykaa.com/media/wysiwyg/2022/Fashion-mega-menu-a.jpeg" alt=""></li>
+            </ul>
+          </li>
+          <li><a href="#">Skin</a></li>
+          <li><a href="#">Hair</a></li>
+          <li><a href="#">Applience</a></li>
+          <li><a href="#">Bath & Body</a></li>
+          <li><a href="#">Natural</a></li>
+          <li><a href="#">Mom & Baby</a></li>
+          <li><a href="#">Health & Wellness</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Fragnace</a></li>
+          <li><a href="#">Pop Ups</a></li>
+        </ul>
+        <button id="addCart" onclick="JavaScript:alert('Add items to cart')">
+          <img
+            width="80px"
+            height="60px"
+            src="https://cdn.vectorstock.com/i/1000x1000/79/43/special-offer-sale-tag-discount-symbol-retail-vector-30197943.webp"
+            alt="animal"
+          />
+        </button>
+      </nav>
     </div>
-    <hr />
+      <hr style="margin-top: 5px" />
   </body>
 </html>
-
