@@ -85,6 +85,7 @@ nav {
   display: inline-flex;
 }
 .up-links li {
+  margin-top: 12px;
   margin-left: 0px;
   text-decoration: none;
 }
@@ -94,7 +95,7 @@ nav {
   color: black;
   font-size: large;
 }
-.up-links .mega-box {
+.up-links .mega-box2 {
   position: absolute;
   width: 95%;
   left: 30px;
@@ -108,14 +109,14 @@ nav {
   transition: all 0.3s ease;
 }
 
-.up-links li:hover .mega-box {
+.up-links li:hover .mega-box2 {
   opacity: 1;
   visibility: visible;
 }
 
 .nav-links li {
   margin-left: 0px;
-  text-decoration: none;
+  margin-top: -10px;
 }
 .nav-links li a {
   padding: 0px 15px;
@@ -125,11 +126,30 @@ nav {
 .nav-links li a:hover {
   color: rgb(245, 9, 154);
   font-size: larger;
-  transition: all 0.3s ease;
+  transition: all 0.03s ease;
 }
-.mega-box {
+
+.mega-box2 {
   position: absolute;
-  top: 108px;
+  top: 23px;
+  width: 95%;
+  padding: 0px 15px 0px 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.up-links li:hover .mega-box2 {
+  opacity: 1;
+  visibility: visible;
+}
+.mega-box2 .content {
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mega-box1 {
+  position: absolute;
+  top: 105px;
   width: 95%;
   left: 30px;
   padding: 0px 15px 0px 0px;
@@ -137,11 +157,12 @@ nav {
   visibility: hidden;
 }
 
-.nav-links li:hover .mega-box {
+.nav-links li:hover .mega-box1 {
   opacity: 1;
   visibility: visible;
+  transition: all 0.03s ease;
 }
-.mega-box .content {
+.mega-box1 .content {
   padding: 25px 20px;
   display: flex;
   justify-content: space-between;
@@ -157,10 +178,10 @@ nav {
 .content header {
   color: rgb(206, 14, 110);
   text-align: left;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 header:hover {
-  font-size: larger;
+  font-size: 20px;
 }
 .content .megaLinks {
   text-decoration: none;
@@ -168,7 +189,7 @@ header:hover {
   text-align: left;
 }
 .content .megaLinks li {
-  margin: -35px;
+  margin: -33px;
 }
 
 .row .megaLinks li a {
