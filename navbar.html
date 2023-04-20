@@ -77,24 +77,18 @@
       #child2 {
         display: flex;
         justify-content: space-between;
-        color: teal;
         font-size: large;
-
       }
       #child2 button {
         margin-top: -9px;
         margin-right: 35px;
       }
-      p {
-        font-size: large;
-      }
+     
       nav {
         height: 65px;
-        line-height: 60px;
+        line-height: 58px;
       }
-      .nav-links {
-        text-decoration: none;
-      }
+      
       .nav-links {
         list-style: none;
         display: inline-flex; 
@@ -108,36 +102,62 @@
         padding: 0px 15px;
         text-decoration: none;
         color: teal;
-
       }
       .nav-links li a:hover {
         color: rgb(245, 9, 154);
         font-size: larger;
         transition: all 0.3s ease;
       }
-      .nav-links #drop-down {
-        padding: 0 10px;
-        top: 170px;
-        line-height: 25px;
-        position:absolute;
+      .mega-box {
+        position: absolute;
+        top: 108px;
+        width: 95%;
+        left: 30px;
+        padding: 0px 15px 0px 0px;
         opacity: 0;
         visibility: hidden;
       }
-      .nav-links li:hover #drop-down  {
-       opacity: 1;
-       visibility: visible;
-       transition: all 0.5s ease;
+
+      .nav-links li:hover .mega-box {
+        opacity: 1;
+        visibility: visible;
       }
-      #drop-down li {
-        text-decoration: none;
-        list-style: none;
+      .mega-box .content {
+        padding: 25px 20px;
+        display: flex;
+        justify-content: space-between;
+        
+      }
+      .content .row {
+        width: calc(25% - 30px);
       }
 
-      #drop-down li a {
-        width: 100%;
-        display: block;
-        padding: 0 0 0 15px;
+      .content .row img {
+        margin-top: 50px;
+        object-fit: cover;
       }
+      .content header {
+        color: rgb(206, 14, 110);
+        text-align: left;
+        margin-top: 10px;
+      }
+      header:hover{
+        font-size: larger;
+      }
+      .content .megaLinks {
+        text-decoration: none;
+        list-style: none;
+        text-align: left;
+      }
+      .content .megaLinks li {
+        margin: -35px;
+      }
+
+      .row .megaLinks li a{
+       padding: 0px 0px;
+       display: block;
+      }
+
     </style>
   </head>
   <body>
@@ -168,24 +188,85 @@
               width="20px"
               height="20px"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcbN1GjI7YcrQP0zUEBo8jf2yb8JlqXewgdTrmEKr6ciDr-FJHPGytffa0pFFQT5irvog-IeRE5kk&usqp=CAU&ec=48665698"
-              alt="animal"
+              alt="cart-logo"
             />
           </button>
         </div>
       </div>
-      <!-- <br /> -->
       <hr style="margin-top: 10px" />
       <div id="child2">
       <nav >
         <ul class="nav-links">
           <li>
             <a href="#">MakeUp</a>
-            <ul id="drop-down">
-              <li><a href="#">Skin</a></li>
-              <li><a href="#">Hair</a></li>
-              <li><a href="#">Applience</a></li>
-              <li><img src="https://www.nykaa.com/media/wysiwyg/2022/Fashion-mega-menu-a.jpeg" alt=""></li>
-            </ul>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <header>Design service</header>
+                  <ul class="megaLinks" style="background-color: rgb(230, 237, 243);">
+                    <li><a href="#">Skin</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Applience</a></li>
+                    <li><a href="#">Bath & Body</a></li>
+                  </ul>
+                  <header>Design service</header>
+                  <ul class="megaLinks" style="background-color:rgb(230, 237, 243);">
+                    <li><a href="#">Skin</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Applience</a></li>
+                    <li><a href="#">Bath & Body</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Design service</header>
+                  <ul class="megaLinks">
+                    <li><a href="#">Skin</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Applience</a></li>
+                    <li><a href="#">Bath & Body</a></li>
+                  </ul>
+                </div>
+                <div class="row" >
+                  <header>Design service</header>
+                  <ul class="megaLinks" style="background-color:rgb(230, 237, 243);">
+                    <li><a href="#">Skin</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Applience</a></li>
+                    <li><a href="#">Bath & Body</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Design service</header>
+                  <ul class="megaLinks">
+                    <li><a href="#">Skin</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Applience</a></li>
+                    <li><a href="#">Bath & Body</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Design service</header>
+                  <ul class="megaLinks" style="background-color:rgb(230, 237, 243);">
+                    <li><a href="#">Skin</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Applience</a></li>
+                    <li><a href="#">Bath & Body</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Design service</header>
+                  <ul class="megaLinks">
+                    <li><a href="#">Skin</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Applience</a></li>
+                    <li><a href="#">Bath & Body</a></li>
+                  </ul>
+                </div>
+                <!-- <div class="row">
+                  <img src="https://www.nykaa.com/media/wysiwyg/2022/Fashion-mega-menu-a.jpeg" alt="">
+                </div> -->
+              </div>
+            </div>
           </li>
           <li><a href="#">Skin</a></li>
           <li><a href="#">Hair</a></li>
