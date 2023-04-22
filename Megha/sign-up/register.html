@@ -20,11 +20,11 @@
     border-bottom: 1px solid #e1e1e1;
     color: #3f414d;;
     /* font-size: 16px; */
-    height: 38px;
+    height: 20px;
     width: 95%;
     text-align: center;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 10px;
     font-family: "Inter",sans-serif !important;
     font-size: 15px;
   }
@@ -93,7 +93,7 @@
     width: 88%;
     padding: auto;
     margin: auto;
-    margin-top: 55px;
+    margin-top: 45px;
     border-radius: 2px;
     background-color: #fc2779;
     font-family: "Inter",sans-serif !important;
@@ -118,12 +118,30 @@
     font-size: smaller;
     margin-left: 38px;
    /* margin-top: -0.5px; */
-  }    
+  }  
+  
+  .fstSub{
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 25px;
+    width: 7%  
+}
+.fstSub > img {
+ height: 100%;
+ width: 100%;
+}
+
     </style>
 </head>
 <body>
-    <div class="mBox">
-        <h4 id="reg">REGISTER</h4>
+    <div class="mBox"> 
+        <div class="fstBox">
+          <div id="mark" class="fstSub">
+            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4zbiTgzGLSU4PzqJjKo3TKwUaEeh4ItVene0gBdoKg0weDSHc" alt="matk">
+          </div>
+          <h4 id="reg">REGISTER</h4>
+      </div>
         <p id="welc">Welcome  to  Nykaa!</p>
         <p id="reward"> Register now and get <span class="points"> 2000 Reward Points!</span> </p>
         <div id="call" class="mscndBox"></div>
@@ -148,6 +166,12 @@
 
 var verifyButton =   document.getElementById("verifyButton")
 verifyButton.addEventListener("click", verifyOTP);
+
+var mark = document.getElementById("mark")
+      mark.addEventListener("click", decline)
+      function decline(){
+        window.location.href = "sign-in.html"
+      }
 
   function verifyOTP(){
     verifyButton.style.backgroundColor = "gray";

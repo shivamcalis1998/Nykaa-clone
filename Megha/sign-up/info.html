@@ -23,11 +23,11 @@
     #done{
         border-bottom: 1px solid #e1e1e1;
     color: #3f414d;
-    height: 38px;
+    height: 30px;
     width: 95%;
     text-align: center;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 5px;
     font-family: "Inter",sans-serif !important;
     font-size: medium;
     }
@@ -96,11 +96,26 @@
     color: #e02020;
         
     }
-        
+    .fstSub{
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 25px;
+    width: 7%  
+}
+.fstSub > img {
+ height: 100%;
+ width: 100%;
+}       
     </style>
 <body>
-    <div class="mCont">
-        <h4 id="done">ALMOST  THERE!</h4>
+    <div class="mCont">  
+        <div class="fstBox">
+            <div id="mark" class="fstSub">
+              <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ4zbiTgzGLSU4PzqJjKo3TKwUaEeh4ItVene0gBdoKg0weDSHc" alt="matk">
+            </div>
+            <h4 id="done">ALMOST  THERE!</h4>
+        </div>
         <div id="mOne"></div>
         <input id="mName" placeholder="Full Name" type="text"/>
         <input id="mAdd" placeholder="Email Address" type="email"/>
@@ -128,6 +143,13 @@
         var b = document.getElementById("mAdd")
         b.addEventListener("change", check)
 
+        var mark = document.getElementById("mark")
+      mark.addEventListener("click", decline)
+      function decline(){
+        window.location.href = "register.html"
+      }
+
+
       function check(){
         var Name = document.getElementById("mName").value;
         var Address = document.getElementById("mAdd").value;
@@ -135,6 +157,10 @@
         if(Name != "" && Address != "" ){
             button.style.backgroundColor = "#fc2779"
         }
+        // else{
+        //     error.innerText = "Please enter require Details"
+        // }
+
 
       }
      function doneTask(){  
