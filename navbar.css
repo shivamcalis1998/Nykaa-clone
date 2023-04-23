@@ -5,6 +5,7 @@
   position: fixed;
   border-bottom: solid 1px gray;
   background-color: white;
+  margin-top: -20px;
 }
 #part1 {
   display: flex;
@@ -69,11 +70,11 @@ input:focus {
   display: flex;
   justify-content: space-between;
   font-size: large;
-  margin-top: 90px;
+  margin-top: 68px;
 }
 #child2 button {
-  margin-top: -9px;
-  margin-right: 0px;
+  margin-top: -40px;
+  /* margin-right: 0px; */
 }
 
 nav {
@@ -126,7 +127,7 @@ nav {
 .nav-links li a {
   padding: 0px 15px;
   text-decoration: none;
-  color: teal;
+  color: gray;
 }
 .nav-links li a:hover {
   color: rgb(245, 9, 154);
@@ -154,7 +155,7 @@ nav {
 
 .mega-box1 {
   position: absolute;
-  top: 130px;
+  top: 120px;
   width: 100%;
   left: 30px;
   padding: 0px 15px 0px 0px;
@@ -195,10 +196,294 @@ header:hover {
   text-align: left;
 }
 .content .megaLinks li {
-  margin: -35px;
+  margin: -30px;
 }
 
 .row .megaLinks li a {
   padding: 0px 0px;
   display: block;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+}
+.overlayshow {
+  opacity: 1;
+  z-index: 1;
+}
+.bag {
+  width: 32%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: -50%;
+  z-index: 9;
+  height: 100vh;
+  border: 1px solid gray;
+  transition: 1s;
+}
+.bagshow {
+  right: 0px;
+}
+
+@media screen and (max-width: 500px) {
+  #parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bag {
+    right: 0px;
+    width: 90%;
+  }
+}
+
+.cart-symbol {
+  width: 50px;
+  margin-top: 5px;
+  text-align: right;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.top-part {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px gray;
+  gap: 2%;
+}
+
+.close {
+  font-size: 40px;
+  font-weight: 500;
+  left: 0;
+  width: 60px;
+  cursor: pointer;
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.top-part p {
+  margin-top: 22px;
+}
+
+.top-part h2 {
+  margin-left: -10px;
+}
+
+.sub-middle {
+  margin: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sub-middle p {
+  margin-top: -0px;
+}
+
+.sub-middle button {
+  width: 100%;
+  padding: 7px;
+  background: transparent;
+  color: crimson;
+  border-style: none;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.middle-part {
+  overflow-y: auto;
+  max-height: 78vh;
+}
+
+.middle-sec {
+  margin: 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 3fr 6fr 1fr;
+  padding: 10px;
+}
+
+.details img {
+  width: 100%;
+}
+
+.cencel {
+  text-align: right;
+}
+
+.details p {
+  margin-top: 0px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.hori {
+  width: 90%;
+  margin: auto;
+}
+
+.horiend {
+  width: 100%;
+  margin: auto;
+}
+
+#quantity {
+  border-style: none;
+}
+
+.quan {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: -10px auto;
+}
+
+.coupon {
+  border: 1px solid gray;
+  margin: 20px;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.coupon h3 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+#coupon-code {
+  width: 65%;
+  height: 25px;
+  margin: auto;
+}
+
+.coupon button {
+  background-color: crimson;
+  width: 70px;
+  height: 31px;
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.price-details {
+  border: 1px solid gray;
+  margin: 20px;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.price-details > div > div {
+  display: flex;
+  justify-content: space-between;
+}
+.price-details > div {
+  margin-bottom: -5px;
+}
+
+.through {
+  text-decoration: line-through;
+}
+.through + span {
+  color: crimson;
+}
+.bottom-part {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.bottom-part h3 {
+  margin: 7px;
+  margin-bottom: -15px;
+}
+.bottom-part p {
+  font-size: 13px;
+  margin-left: 7px;
+  margin-top: 18px;
+}
+.bottom-part > div:last-child {
+  width: 50%;
+  padding: 8px;
+}
+.bottom-part button {
+  width: 100%;
+  height: 90%;
+  text-align: left;
+  background-color: rgb(220, 42, 78);
+  border-style: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+}
+.fa-arrow-right {
+  position: relative;
+  right: -80%;
+  top: -70%;
+  font-size: 25px;
+}
+
+.after {
+  display: inline;
+  color: white;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background-color: #975d8f;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 500;
+  /* z-index: -1; */
+}
+.afterr {
+  display: none;
+}
+#product-details {
+  border: 1px solid gray;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+body {
+  overflow-x: hidden;
+}
+.cart-empty {
+  text-align: center;
+  color: rgb(225, 11, 11);
+  height: 50vh;
+}
+.cart-empty button {
+  width: 40%;
+  height: 45px;
+  background-color: red;
+  color: #fff;
+  font-size: 16px;
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.middle-sec1 {
+  display: none;
+}
+.cart-empty1 {
+  display: none;
+}
+.coupon1 {
+  display: none;
+}
+.price-details1 {
+  display: none;
 }

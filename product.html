@@ -4,152 +4,1381 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRODUCT PAGE</title>
-    <style>
-      h1 {
-        text-align: center;
-      }
-      h2 {
-        text-align: center;
-      }
-      #maindiv {
-        display: flex;
-      }
-      .row {
-        display: flex;
-        flex-direction: column;
-      }
-      #container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        margin-left: 110px;
-        margin-right: 125px;
-        gap: 20px;
-      }
-      #container > div {
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        margin: 20px;
-      }
-      #container > div > img {
-        margin-left: 30px;
-      }
-      #container > div > h5 {
-        text-align: center;
-      }
-      #container > div > p {
-        text-align: center;
-      }
-
-      @media all and(min-width: 421px) and (max-width: 780px) {
-        #container {
-          grid-template-columns: repeat(1, 1fr);
-        }
-      }
-      #container > div > button {
-        border: none;
-        border-radius: 10px;
-        height: 50px;
-        width: 200px;
-        background-color: palevioletred;
-        color: white;
-        font-weight: bolder;
-        margin-left: 35px;
-        margin-right: 20px;
-      }
-      #container > div:hover {
-        cursor: pointer;
-      }
-      #container > div > button:hover {
-        cursor: pointer;
-      }
-      select {
-        border: none;
-        width: 200px;
-        height: 50px;
-        margin-left: 20px;
-        background-color: white;
-        font-weight: bold;
-        vertical-align: bottom;
-      }
-      #container1 {
-        background-color: rgb(63, 65, 77);
-        display: flex;
-        justify-content: space-evenly;
-        padding: 22px;
-      }
-      #container1 > div {
-        width: 20%;
-        font-size: 13px;
-        line-height: 20px;
-        word-spacing: 5px;
-      }
-      #container1 img {
-        margin-top: -5px;
-        margin-right: 5px;
-        width: 10%;
-      }
-
-      #container2 {
-        background-color: rgb(140, 141, 148);
-        display: flex;
-        justify-content: space-evenly;
-      }
-      #container2 > div {
-        color: white;
-        margin: 50px 0px 0px 40px;
-      }
-      #container2 p {
-        margin-bottom: 12px;
-      }
-      #container3 {
-        display: flex;
-        justify-content: center;
-      }
-      .container3a {
-        display: flex;
-        justify-content: space-between;
-        padding: 19px;
-        width: 15%;
-        margin: 50px 0px;
-        font-size: 15px;
-      }
-      .container3a img {
-        margin-right: 15px;
-        margin-top: 15px;
-      }
-      .container3a p {
-        margin-bottom: -20px;
-      }
-      #container3a1 {
-        width: 12%;
-        padding: 20px;
-        margin: 50px 0px;
-        font-size: 11px;
-        text-align: center;
-      }
-      #container3a13 {
-        display: flex;
-        justify-content: space-around;
-      }
-      #container4 {
-        background-color: #fc2779;
-        text-align: center;
-        color: white;
-        font-size: 16px;
-        padding: 5px;
-      }
-      #container4 div {
-        margin-right: 20px;
-      }
-      #punit {
-        display: flex;
-        margin-bottom: -10px;
-        justify-content: center;
-      }
-    </style>
+    <title>products</title>
+    <link rel = "icon" href = 
+"https://lh3.googleusercontent.com/RllZf42XounX60rftJqa0K3EfoCMmzGqdOgbZvtQiPETcOVaes8cw1bEeBhW7UGeNb0=h200" 
+        type = "image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/eed82eddcd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHt0A93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="product.css" />
   </head>
   <body>
-    <h1>Bombay Shaving Company Products Collection (27)</h1>
+        <div id="parent">
+          <hr style="margin-bottom: -18px" />
+          <div id="child1">
+            <div id="part1">
+              <img
+                src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"
+                alt="logo"
+              />
+              <nav>
+                <ul class="up-links">
+                  <li><a href="#">Categories</a></li>
+                  <li><a href="#">Brands</a></li>
+                  <li><a href="#">Luxe</a></li>
+                  <li><a href="#">Nykaa Fashion</a></li>
+                  <li><a href="#">Beauty Advise</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div id="part2">
+              <input
+                type="search"
+                name=""
+                id="search"
+                placeholder="Search On Nykaa"
+              />
+              <button id="button1">Sign in</button>
+              <button id="addCart">
+                <div class="cart-symbol">
+                  <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl non-empty" style="color: #292929;"></i>
+                <div class="after">0</div>
+                </div>
+              </button>
+            </div>
+          </div>
+          <hr style="margin-bottom: -8px" />
+          <div id="child2">
+          <nav>
+            <ul class="nav-links">
+              <li>
+                <a href="#">MakeUp</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Face</a></li>
+                        <li><a href="#">Face Primer</a></li>
+                        <li><a href="#">Concereal</a></li>
+                        <li><a href="#">Foundation</a></li>
+                        <li><a href="#">Compact</a></li>
+                        <li><a href="#">Contour</a></li>
+                        <li><a href="#">Loose Powder</a></li>
+                        <li><a href="#">Tinted Mositurizer</a></li>
+                        <li><a href="#">Blush</a></li>
+                        <li><a href="#">Bronzer</a></li>
+                        <li><a href="#">BB & CC Cream</a></li>
+                        <li><a href="#">Highlighters</a></li>
+                        <li><a href="#">Setting Spray</a></li>
+                        <li><a href="#">Makeup remover</a></li>
+                        <li><a href="#">Sindur</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Eyes</a></li>
+                        <li><a href="#">Kajal</a></li>
+                        <li><a href="#">Eyeliner</a></li>
+                        <li><a href="#">Maskara</a></li>
+                        <li><a href="#">Eye Shadow</a></li>
+                        <li><a href="#">Eye Brow Enhancer</a></li>
+                        <li><a href="#">Eye Primer</a></li>
+                        <li><a href="#">False Eyelashes</a></li>
+                        <li><a href="#">False Makup remover</a></li>
+                        <li><a href="#">Under Eye Conceler</a></li>
+                        <li><a href="#">Contact Lances</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">MakeUp Kits and Combos</a></li>
+                        <li><a href="#">MakeUp Kits</a></li>
+                        <li><a href="#">MakeUp Combos</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Lips</a></li>
+                        <li><a href="#">Lipstick</a></li>
+                        <li><a href="#">Liquid Lipstick</a></li>
+                        <li><a href="#">Lip Crayon</a></li>
+                        <li><a href="#">Lip Gloss</a></li>
+                        <li><a href="#">Lip Liner</a></li>
+                        <li><a href="#">Lip Plumper</a></li>
+                        <li><a href="#">Lip Stain</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Nails</a></li>
+                        <li><a href="#">Nail Polish</a></li>
+                        <li><a href="#">Nail Arts Kits</a></li>
+                        <li><a href="#">Nail care</a></li>
+                        <li><a href="#">Nail Polish remover</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools and Brushes</a></li>
+                        <li><a href="#">Face Brush</a></li>
+                        <li><a href="#">Eye Brush</a></li>
+                        <li><a href="#">Lips Brush</a></li>
+                        <li><a href="#">Brush Sets</a></li>
+                        <li><a href="#">Brush Cleaners</a></li>
+                        <li><a href="#">Sponges & Applicators</a></li>
+                        <li><a href="#">Eyelashes curlres</a></li>
+                        <li><a href="#">Tweezers</a></li>
+                        <li><a href="#">Sharpner</a></li>
+                        <li><a href="#">Mirrors</a></li>
+                        <li><a href="#">MakeUps Pouches</a></li>
+                      </ul>
+                    <div class="row">  
+                        <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                          <li><a href="#" style="color: rgb(151, 11, 121)">Multi-Functional MakeUp</a></li>
+                        </ul> 
+                    </div>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Kay Beauty</a></li>
+                        <li><a href="#">Huda Beauty</a></li>
+                        <li><a href="#">Charlotte Tilbury</a></li>
+                        <li><a href="#">M.A.C.</a></li>
+                        <li><a href="#">Mabylline New York</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Lakme</a></li>
+                        <li><a href="#">Nykaa Cosmetics</a></li>
+                        <li><a href="#">Nyx Pro. MakeUp</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos @ Nykaa</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NFBA Nominees 2022</a></li>
+                        <li><a href="#">Gift @ Nykaa</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Searches</a></li>
+                        <li><a href="#">Nude Lipstik</a></li>
+                        <li><a href="#">Mate Lipstik</a></li>
+                        <li><a href="#">Red Lipstik</a></li>
+                        <li><a href="#">Pink Lipstik</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://images-static.nykaa.com/creatives/64f80155-5bd0-4fcc-9f15-0f9fbdeaa128/default.jpg?tr=w-300,cm-pad_resize" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Skin</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Moisturizers</a></li>
+                        <li><a href="#">Face Moisturizers</a></li>
+                        <li><a href="#">Day Cream</a></li>
+                        <li><a href="#">Night Cream</a></li>
+                        <li><a href="#">Face Oils</a></li>
+                        <li><a href="#">Serums & Essence</a></li>
+                        <li><a href="#">All Purpose gel</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Cleaners</a></li>
+                        <li><a href="#">Face Wash</a></li>
+                        <li><a href="#">Cleaners</a></li>
+                        <li><a href="#">Miceller Water</a></li>
+                        <li><a href="#">Face Wipes</a></li>
+                        <li><a href="#">Makeup Remover</a></li>
+                        <li><a href="#">Scrubs & Exfoliators</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Searches</a></li>
+                        <li><a href="#">Toners under 1000</a></li>
+                        <li><a href="#">FaceWash only for oily skin</a></li>
+                        <li><a href="#">Oil free facewash</a></li>
+                        <li><a href="#">Moisturizers</a></li>
+                        <li><a href="#">Lip Balm under 500</a></li>
+                        <li><a href="#">Vitamine C serum</a></li>
+                      </ul> 
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Masks</a></li>
+                        <li><a href="#">Sheet Masks</a></li>
+                        <li><a href="#">Sleeping Masks</a></li>
+                        <li><a href="#">Masks & Peels</a></li>
+                        <li><a href="#">Face Packs</a></li>
+                        <li><a href="#">Face Bleach</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Body Care</a></li>
+                        <li><a href="#">Lotions & creams</a></li>
+                        <li><a href="#">Body butter</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                        <li><a href="#">Soup</a></li>
+                        <li><a href="#">Scrub & Fulahs</a></li>
+                        <li><a href="#">Lip Mask</a></li>
+                      </ul> 
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hands & Foots</a></li>
+                        <li><a href="#">Lotions & creams</a></li>
+                        <li><a href="#">Body butter</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">I beuty by Nyka CSMS</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Specialised SkinCare</a></li>
+                        <li><a href="#">Acne Spots Correctors</a></li>
+                        <li><a href="#">Nose Strips</a></li>
+                        <li><a href="#">Facial Peels</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Eye Care</a></li>
+                        <li><a href="#">Under Eye Cream</a></li>
+                        <li><a href="#">Eye Serum</a></li>
+                        <li><a href="#">Eye Masks</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Sun Care</a></li>
+                        <li><a href="#">Face SunsCream</a></li>
+                        <li><a href="#">Body SunsCream</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Kits & Combos</a></li>
+                        <li><a href="#">Facial Combos</a></li>
+                        <li><a href="#">Combos @ Nykaa</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">skin tools</a></li>
+                        <li><a href="#">Face Massagers</a></li>
+                        <li><a href="#">Cleansing Brushes</a></li>
+                        <li><a href="#">BlackHEad Removers</a></li>
+                        <li><a href="#">DermaRoller</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">skin Supplement</a></li>
+                        <li><a href="#">Vitamins & Minerals</a></li>
+                        <li><a href="#">Ayurvedic Herbs</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Neck Creams</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Shop By concern</a></li>
+                        <li><a href="#">Acne</a></li>
+                        <li><a href="#">Dull Skins</a></li>
+                        <li><a href="#">Pigmentation</a></li>
+                        <li><a href="#">Wrincles & Fine lines</a></li>
+                        <li><a href="#">Pores</a></li>
+                        <li><a href="#">Dark Spots</a></li>
+                        <li><a href="#">Face Tans</a></li>
+                        <li><a href="#">Oil Control</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">NFBA Nomeenis</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://images-static.nykaa.com/creatives/54bc3592-4a43-4c74-9234-bb65c9cbc0f3/default.jpg?tr=w-300,cm-pad_resize" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Hair</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair care</a></li>
+                        <li><a href="#">Shampoo</a></li>
+                        <li><a href="#">Dry Shampoo</a></li>
+                        <li><a href="#">Conditionrs</a></li>
+                        <li><a href="#">Hair oil</a></li>
+                        <li><a href="#">Hair serum</a></li>
+                        <li><a href="#">Hair cream & Masks</a></li>
+                        <li><a href="#">Hair Supplement</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools & Accessories</a></li>
+                        <li><a href="#">Hair brushes</a></li>
+                        <li><a href="#">Hair Combo</a></li>
+                        <li><a href="#">Dryer & Stylers</a></li>
+                        <li><a href="#">Straitners</a></li>
+                        <li><a href="#">Rollers</a></li>
+                        <li><a href="#">Hair extension</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair Styling</a></li>
+                        <li><a href="#">Hair color</a></li>
+                        <li><a href="#">Hair Spray</a></li>
+                        <li><a href="#">Gels & waxs</a></li>
+                      </ul>
+                      <ul class="megaLinks" >
+                        <li><a href="#" style="color: rgb(151, 11, 121)"></a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Personal Brands</a></li>
+                        <li><a href="#">Straight</a></li>
+                        <li><a href="#">Curley & wavy</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <!-- <header>Shop By concern</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Shop By concern</a></li>
+                        <li><a href="#">HairFall & Thining</a></li>
+                        <li><a href="#">DandRuff</a></li>
+                        <li><a href="#">Split Ends</a></li>
+                        <li><a href="#">Color Protection</a></li>
+                      </ul>
+                      <!-- <header>Trending Serches</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Serches</a></li>
+                        <li><a href="#">Hair Growth oil</a></li>
+                        <li><a href="#">Hair Straightners brush</a></li>
+                        <li><a href="#">Dandruff shampoos</a></li>
+                        <li><a href="#">Sulphate free shampoos</a></li>
+                        <li><a href="#">Castor Oil for hair</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Top Brands</header> -->
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Nykaa Naturals</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Wella Profesionls</a></li>
+                        <li><a href="#">L'Oreal Profesionls</a></li>
+                        <li><a href="#">BBlunt</a></li>
+                        <li><a href="#">Herbel essance</a></li>
+                        <li><a href="#">SwarzKolf</a></li>
+                        <li><a href="#">Profesionls</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Quick Links</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NBFA Nominees 2022</a></li>
+                        <li><a href="#">Herbal Hair Care</a></li>
+                        <li><a href="#">Routine Finder</a></li>
+                        <li><a href="#">The Beuty Intigrate Edit</a></li>
+                        <li><a href="#">The Safe  BEuty edits</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="hair (1).jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Applience</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Moisturizers</a></li>
+                        <li><a href="#">Face Moisturizers</a></li>
+                        <li><a href="#">Day Cream</a></li>
+                        <li><a href="#">Night Cream</a></li>
+                        <li><a href="#">Face Oils</a></li>
+                        <li><a href="#">Serums & Essence</a></li>
+                        <li><a href="#">All Purpose gel</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Cleaners</a></li>
+                        <li><a href="#">Face Wash</a></li>
+                        <li><a href="#">Cleaners</a></li>
+                        <li><a href="#">Miceller Water</a></li>
+                        <li><a href="#">Face Wipes</a></li>
+                        <li><a href="#">Makeup Remover</a></li>
+                        <li><a href="#">Scrubs & Exfoliators</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Searches</a></li>
+                        <li><a href="#">Toners under 1000</a></li>
+                        <li><a href="#">FaceWash only for oily skin</a></li>
+                        <li><a href="#">Oil free facewash</a></li>
+                        <li><a href="#">Moisturizers</a></li>
+                        <li><a href="#">Lip Balm under 500</a></li>
+                        <li><a href="#">Vitamine C serum</a></li>
+                      </ul> 
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Masks</a></li>
+                        <li><a href="#">Sheet Masks</a></li>
+                        <li><a href="#">Sleeping Masks</a></li>
+                        <li><a href="#">Masks & Peels</a></li>
+                        <li><a href="#">Face Packs</a></li>
+                        <li><a href="#">Face Bleach</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Body Care</a></li>
+                        <li><a href="#">Lotions & creams</a></li>
+                        <li><a href="#">Body butter</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                        <li><a href="#">Soup</a></li>
+                        <li><a href="#">Scrub & Fulahs</a></li>
+                        <li><a href="#">Lip Mask</a></li>
+                      </ul> 
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hands & Foots</a></li>
+                        <li><a href="#">Lotions & creams</a></li>
+                        <li><a href="#">Body butter</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">I beuty by Nyka CSMS</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Specialised SkinCare</a></li>
+                        <li><a href="#">Acne Spots Correctors</a></li>
+                        <li><a href="#">Nose Strips</a></li>
+                        <li><a href="#">Facial Peels</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Eye Care</a></li>
+                        <li><a href="#">Under Eye Cream</a></li>
+                        <li><a href="#">Eye Serum</a></li>
+                        <li><a href="#">Eye Masks</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Sun Care</a></li>
+                        <li><a href="#">Face SunsCream</a></li>
+                        <li><a href="#">Body SunsCream</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Kits & Combos</a></li>
+                        <li><a href="#">Facial Combos</a></li>
+                        <li><a href="#">Combos @ Nykaa</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">skin tools</a></li>
+                        <li><a href="#">Face Massagers</a></li>
+                        <li><a href="#">Cleansing Brushes</a></li>
+                        <li><a href="#">BlackHEad Removers</a></li>
+                        <li><a href="#">DermaRoller</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">skin Supplement</a></li>
+                        <li><a href="#">Vitamins & Minerals</a></li>
+                        <li><a href="#">Ayurvedic Herbs</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Neck Creams</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Shop By concern</a></li>
+                        <li><a href="#">Acne</a></li>
+                        <li><a href="#">Dull Skins</a></li>
+                        <li><a href="#">Pigmentation</a></li>
+                        <li><a href="#">Wrincles & Fine lines</a></li>
+                        <li><a href="#">Pores</a></li>
+                        <li><a href="#">Dark Spots</a></li>
+                        <li><a href="#">Face Tans</a></li>
+                        <li><a href="#">Oil Control</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">NFBA Nomeenis</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://images-static.nykaa.com/creatives/54bc3592-4a43-4c74-9234-bb65c9cbc0f3/default.jpg?tr=w-300,cm-pad_resize" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Bath & Body</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Face</a></li>
+                        <li><a href="#">Face Primer</a></li>
+                        <li><a href="#">Concereal</a></li>
+                        <li><a href="#">Foundation</a></li>
+                        <li><a href="#">Compact</a></li>
+                        <li><a href="#">Contour</a></li>
+                        <li><a href="#">Loose Powder</a></li>
+                        <li><a href="#">Tinted Mositurizer</a></li>
+                        <li><a href="#">Blush</a></li>
+                        <li><a href="#">Bronzer</a></li>
+                        <li><a href="#">BB & CC Cream</a></li>
+                        <li><a href="#">Highlighters</a></li>
+                        <li><a href="#">Setting Spray</a></li>
+                        <li><a href="#">Makeup remover</a></li>
+                        <li><a href="#">Sindur</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Eyes</a></li>
+                        <li><a href="#">Kajal</a></li>
+                        <li><a href="#">Eyeliner</a></li>
+                        <li><a href="#">Maskara</a></li>
+                        <li><a href="#">Eye Shadow</a></li>
+                        <li><a href="#">Eye Brow Enhancer</a></li>
+                        <li><a href="#">Eye Primer</a></li>
+                        <li><a href="#">False Eyelashes</a></li>
+                        <li><a href="#">False Makup remover</a></li>
+                        <li><a href="#">Under Eye Conceler</a></li>
+                        <li><a href="#">Contact Lances</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">MakeUp Kits and Combos</a></li>
+                        <li><a href="#">MakeUp Kits</a></li>
+                        <li><a href="#">MakeUp Combos</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Lips</a></li>
+                        <li><a href="#">Lipstick</a></li>
+                        <li><a href="#">Liquid Lipstick</a></li>
+                        <li><a href="#">Lip Crayon</a></li>
+                        <li><a href="#">Lip Gloss</a></li>
+                        <li><a href="#">Lip Liner</a></li>
+                        <li><a href="#">Lip Plumper</a></li>
+                        <li><a href="#">Lip Stain</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Nails</a></li>
+                        <li><a href="#">Nail Polish</a></li>
+                        <li><a href="#">Nail Arts Kits</a></li>
+                        <li><a href="#">Nail care</a></li>
+                        <li><a href="#">Nail Polish remover</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools and Brushes</a></li>
+                        <li><a href="#">Face Brush</a></li>
+                        <li><a href="#">Eye Brush</a></li>
+                        <li><a href="#">Lips Brush</a></li>
+                        <li><a href="#">Brush Sets</a></li>
+                        <li><a href="#">Brush Cleaners</a></li>
+                        <li><a href="#">Sponges & Applicators</a></li>
+                        <li><a href="#">Eyelashes curlres</a></li>
+                        <li><a href="#">Tweezers</a></li>
+                        <li><a href="#">Sharpner</a></li>
+                        <li><a href="#">Mirrors</a></li>
+                        <li><a href="#">MakeUps Pouches</a></li>
+                      </ul>
+                    <div class="row">  
+                        <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                          <li><a href="#" style="color: rgb(151, 11, 121)">Multi-Functional MakeUp</a></li>
+                        </ul> 
+                    </div>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Kay Beauty</a></li>
+                        <li><a href="#">Huda Beauty</a></li>
+                        <li><a href="#">Charlotte Tilbury</a></li>
+                        <li><a href="#">M.A.C.</a></li>
+                        <li><a href="#">Mabylline New York</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Lakme</a></li>
+                        <li><a href="#">Nykaa Cosmetics</a></li>
+                        <li><a href="#">Nyx Pro. MakeUp</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos @ Nykaa</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NFBA Nominees 2022</a></li>
+                        <li><a href="#">Gift @ Nykaa</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Searches</a></li>
+                        <li><a href="#">Nude Lipstik</a></li>
+                        <li><a href="#">Mate Lipstik</a></li>
+                        <li><a href="#">Red Lipstik</a></li>
+                        <li><a href="#">Pink Lipstik</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://media.gettyimages.com/id/587825516/photo/man-in-bathtub.jpg?s=612x612&w=gi&k=20&c=dEpv5KXK6y3EdzOzt7KnC8r8mSvFPvBn3tVT3oqxs7s=" alt=""
+                      height="320px"
+                      width="320px">
+    
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Natural</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair care</a></li>
+                        <li><a href="#">Shampoo</a></li>
+                        <li><a href="#">Dry Shampoo</a></li>
+                        <li><a href="#">Conditionrs</a></li>
+                        <li><a href="#">Hair oil</a></li>
+                        <li><a href="#">Hair serum</a></li>
+                        <li><a href="#">Hair cream & Masks</a></li>
+                        <li><a href="#">Hair Supplement</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools & Accessories</a></li>
+                        <li><a href="#">Hair brushes</a></li>
+                        <li><a href="#">Hair Combo</a></li>
+                        <li><a href="#">Dryer & Stylers</a></li>
+                        <li><a href="#">Straitners</a></li>
+                        <li><a href="#">Rollers</a></li>
+                        <li><a href="#">Hair extension</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair Styling</a></li>
+                        <li><a href="#">Hair color</a></li>
+                        <li><a href="#">Hair Spray</a></li>
+                        <li><a href="#">Gels & waxs</a></li>
+                      </ul>
+                      <ul class="megaLinks" >
+                        <li><a href="#" style="color: rgb(151, 11, 121)"></a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Personal Brands</a></li>
+                        <li><a href="#">Straight</a></li>
+                        <li><a href="#">Curley & wavy</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <!-- <header>Shop By concern</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Shop By concern</a></li>
+                        <li><a href="#">HairFall & Thining</a></li>
+                        <li><a href="#">DandRuff</a></li>
+                        <li><a href="#">Split Ends</a></li>
+                        <li><a href="#">Color Protection</a></li>
+                      </ul>
+                      <!-- <header>Trending Serches</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Serches</a></li>
+                        <li><a href="#">Hair Growth oil</a></li>
+                        <li><a href="#">Hair Straightners brush</a></li>
+                        <li><a href="#">Dandruff shampoos</a></li>
+                        <li><a href="#">Sulphate free shampoos</a></li>
+                        <li><a href="#">Castor Oil for hair</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Top Brands</header> -->
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Nykaa Naturals</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Wella Profesionls</a></li>
+                        <li><a href="#">L'Oreal Profesionls</a></li>
+                        <li><a href="#">BBlunt</a></li>
+                        <li><a href="#">Herbel essance</a></li>
+                        <li><a href="#">SwarzKolf</a></li>
+                        <li><a href="#">Profesionls</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Quick Links</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NBFA Nominees 2022</a></li>
+                        <li><a href="#">Herbal Hair Care</a></li>
+                        <li><a href="#">Routine Finder</a></li>
+                        <li><a href="#">The Beuty Intigrate Edit</a></li>
+                        <li><a href="#">The Safe  BEuty edits</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/11/11/Pictures/_155901e0-241c-11eb-9c71-c26c1d2bb974.jpg" alt=""
+                      height="320px"
+                      width="320px">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Mom & Baby</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair care</a></li>
+                        <li><a href="#">Shampoo</a></li>
+                        <li><a href="#">Dry Shampoo</a></li>
+                        <li><a href="#">Conditionrs</a></li>
+                        <li><a href="#">Hair oil</a></li>
+                        <li><a href="#">Hair serum</a></li>
+                        <li><a href="#">Hair cream & Masks</a></li>
+                        <li><a href="#">Hair Supplement</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools & Accessories</a></li>
+                        <li><a href="#">Hair brushes</a></li>
+                        <li><a href="#">Hair Combo</a></li>
+                        <li><a href="#">Dryer & Stylers</a></li>
+                        <li><a href="#">Straitners</a></li>
+                        <li><a href="#">Rollers</a></li>
+                        <li><a href="#">Hair extension</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair Styling</a></li>
+                        <li><a href="#">Hair color</a></li>
+                        <li><a href="#">Hair Spray</a></li>
+                        <li><a href="#">Gels & waxs</a></li>
+                      </ul>
+                      <ul class="megaLinks" >
+                        <li><a href="#" style="color: rgb(151, 11, 121)"></a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Personal Brands</a></li>
+                        <li><a href="#">Straight</a></li>
+                        <li><a href="#">Curley & wavy</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <!-- <header>Shop By concern</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Shop By concern</a></li>
+                        <li><a href="#">HairFall & Thining</a></li>
+                        <li><a href="#">DandRuff</a></li>
+                        <li><a href="#">Split Ends</a></li>
+                        <li><a href="#">Color Protection</a></li>
+                      </ul>
+                      <!-- <header>Trending Serches</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Serches</a></li>
+                        <li><a href="#">Hair Growth oil</a></li>
+                        <li><a href="#">Hair Straightners brush</a></li>
+                        <li><a href="#">Dandruff shampoos</a></li>
+                        <li><a href="#">Sulphate free shampoos</a></li>
+                        <li><a href="#">Castor Oil for hair</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Top Brands</header> -->
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Nykaa Naturals</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Wella Profesionls</a></li>
+                        <li><a href="#">L'Oreal Profesionls</a></li>
+                        <li><a href="#">BBlunt</a></li>
+                        <li><a href="#">Herbel essance</a></li>
+                        <li><a href="#">SwarzKolf</a></li>
+                        <li><a href="#">Profesionls</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Quick Links</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NBFA Nominees 2022</a></li>
+                        <li><a href="#">Herbal Hair Care</a></li>
+                        <li><a href="#">Routine Finder</a></li>
+                        <li><a href="#">The Beuty Intigrate Edit</a></li>
+                        <li><a href="#">The Safe  BEuty edits</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://rukminim1.flixcart.com/image/416/416/poster/z/t/k/child-s-love-mom-and-baby-3-mqp463-medium-original-imae77ytkuscwhrq.jpeg?q=70" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Health & Wellness</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair care</a></li>
+                        <li><a href="#">Shampoo</a></li>
+                        <li><a href="#">Dry Shampoo</a></li>
+                        <li><a href="#">Conditionrs</a></li>
+                        <li><a href="#">Hair oil</a></li>
+                        <li><a href="#">Hair serum</a></li>
+                        <li><a href="#">Hair cream & Masks</a></li>
+                        <li><a href="#">Hair Supplement</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools & Accessories</a></li>
+                        <li><a href="#">Hair brushes</a></li>
+                        <li><a href="#">Hair Combo</a></li>
+                        <li><a href="#">Dryer & Stylers</a></li>
+                        <li><a href="#">Straitners</a></li>
+                        <li><a href="#">Rollers</a></li>
+                        <li><a href="#">Hair extension</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair Styling</a></li>
+                        <li><a href="#">Hair color</a></li>
+                        <li><a href="#">Hair Spray</a></li>
+                        <li><a href="#">Gels & waxs</a></li>
+                      </ul>
+                      <ul class="megaLinks" >
+                        <li><a href="#" style="color: rgb(151, 11, 121)"></a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Personal Brands</a></li>
+                        <li><a href="#">Straight</a></li>
+                        <li><a href="#">Curley & wavy</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <!-- <header>Shop By concern</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Shop By concern</a></li>
+                        <li><a href="#">HairFall & Thining</a></li>
+                        <li><a href="#">DandRuff</a></li>
+                        <li><a href="#">Split Ends</a></li>
+                        <li><a href="#">Color Protection</a></li>
+                      </ul>
+                      <!-- <header>Trending Serches</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Serches</a></li>
+                        <li><a href="#">Hair Growth oil</a></li>
+                        <li><a href="#">Hair Straightners brush</a></li>
+                        <li><a href="#">Dandruff shampoos</a></li>
+                        <li><a href="#">Sulphate free shampoos</a></li>
+                        <li><a href="#">Castor Oil for hair</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Top Brands</header> -->
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Nykaa Naturals</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Wella Profesionls</a></li>
+                        <li><a href="#">L'Oreal Profesionls</a></li>
+                        <li><a href="#">BBlunt</a></li>
+                        <li><a href="#">Herbel essance</a></li>
+                        <li><a href="#">SwarzKolf</a></li>
+                        <li><a href="#">Profesionls</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Quick Links</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NBFA Nominees 2022</a></li>
+                        <li><a href="#">Herbal Hair Care</a></li>
+                        <li><a href="#">Routine Finder</a></li>
+                        <li><a href="#">The Beuty Intigrate Edit</a></li>
+                        <li><a href="#">The Safe  BEuty edits</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://img1.exportersindia.com/product_images/bc-full/dir_116/3451922/herbal-wellness-products-1524743528-3807532.jpeg" alt="" height="320px" width="320px">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Men</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Face</a></li>
+                        <li><a href="#">Face Primer</a></li>
+                        <li><a href="#">Concereal</a></li>
+                        <li><a href="#">Foundation</a></li>
+                        <li><a href="#">Compact</a></li>
+                        <li><a href="#">Contour</a></li>
+                        <li><a href="#">Loose Powder</a></li>
+                        <li><a href="#">Tinted Mositurizer</a></li>
+                        <li><a href="#">Blush</a></li>
+                        <li><a href="#">Bronzer</a></li>
+                        <li><a href="#">BB & CC Cream</a></li>
+                        <li><a href="#">Highlighters</a></li>
+                        <li><a href="#">Setting Spray</a></li>
+                        <li><a href="#">Makeup remover</a></li>
+                        <li><a href="#">Sindur</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Eyes</a></li>
+                        <li><a href="#">Kajal</a></li>
+                        <li><a href="#">Eyeliner</a></li>
+                        <li><a href="#">Maskara</a></li>
+                        <li><a href="#">Eye Shadow</a></li>
+                        <li><a href="#">Eye Brow Enhancer</a></li>
+                        <li><a href="#">Eye Primer</a></li>
+                        <li><a href="#">False Eyelashes</a></li>
+                        <li><a href="#">False Makup remover</a></li>
+                        <li><a href="#">Under Eye Conceler</a></li>
+                        <li><a href="#">Contact Lances</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">MakeUp Kits and Combos</a></li>
+                        <li><a href="#">MakeUp Kits</a></li>
+                        <li><a href="#">MakeUp Combos</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Lips</a></li>
+                        <li><a href="#">Lipstick</a></li>
+                        <li><a href="#">Liquid Lipstick</a></li>
+                        <li><a href="#">Lip Crayon</a></li>
+                        <li><a href="#">Lip Gloss</a></li>
+                        <li><a href="#">Lip Liner</a></li>
+                        <li><a href="#">Lip Plumper</a></li>
+                        <li><a href="#">Lip Stain</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Nails</a></li>
+                        <li><a href="#">Nail Polish</a></li>
+                        <li><a href="#">Nail Arts Kits</a></li>
+                        <li><a href="#">Nail care</a></li>
+                        <li><a href="#">Nail Polish remover</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools and Brushes</a></li>
+                        <li><a href="#">Face Brush</a></li>
+                        <li><a href="#">Eye Brush</a></li>
+                        <li><a href="#">Lips Brush</a></li>
+                        <li><a href="#">Brush Sets</a></li>
+                        <li><a href="#">Brush Cleaners</a></li>
+                        <li><a href="#">Sponges & Applicators</a></li>
+                        <li><a href="#">Eyelashes curlres</a></li>
+                        <li><a href="#">Tweezers</a></li>
+                        <li><a href="#">Sharpner</a></li>
+                        <li><a href="#">Mirrors</a></li>
+                        <li><a href="#">MakeUps Pouches</a></li>
+                      </ul>
+                    <div class="row">  
+                        <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                          <li><a href="#" style="color: rgb(151, 11, 121)">Multi-Functional MakeUp</a></li>
+                        </ul> 
+                    </div>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Kay Beauty</a></li>
+                        <li><a href="#">Huda Beauty</a></li>
+                        <li><a href="#">Charlotte Tilbury</a></li>
+                        <li><a href="#">M.A.C.</a></li>
+                        <li><a href="#">Mabylline New York</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Lakme</a></li>
+                        <li><a href="#">Nykaa Cosmetics</a></li>
+                        <li><a href="#">Nyx Pro. MakeUp</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos @ Nykaa</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NFBA Nominees 2022</a></li>
+                        <li><a href="#">Gift @ Nykaa</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Searches</a></li>
+                        <li><a href="#">Nude Lipstik</a></li>
+                        <li><a href="#">Mate Lipstik</a></li>
+                        <li><a href="#">Red Lipstik</a></li>
+                        <li><a href="#">Pink Lipstik</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="mens.webp" alt="">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Fragnace</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair care</a></li>
+                        <li><a href="#">Shampoo</a></li>
+                        <li><a href="#">Dry Shampoo</a></li>
+                        <li><a href="#">Conditionrs</a></li>
+                        <li><a href="#">Hair oil</a></li>
+                        <li><a href="#">Hair serum</a></li>
+                        <li><a href="#">Hair cream & Masks</a></li>
+                        <li><a href="#">Hair Supplement</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools & Accessories</a></li>
+                        <li><a href="#">Hair brushes</a></li>
+                        <li><a href="#">Hair Combo</a></li>
+                        <li><a href="#">Dryer & Stylers</a></li>
+                        <li><a href="#">Straitners</a></li>
+                        <li><a href="#">Rollers</a></li>
+                        <li><a href="#">Hair extension</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Hair Styling</a></li>
+                        <li><a href="#">Hair color</a></li>
+                        <li><a href="#">Hair Spray</a></li>
+                        <li><a href="#">Gels & waxs</a></li>
+                      </ul>
+                      <ul class="megaLinks" >
+                        <li><a href="#" style="color: rgb(151, 11, 121)"></a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Personal Brands</a></li>
+                        <li><a href="#">Straight</a></li>
+                        <li><a href="#">Curley & wavy</a></li>
+                        <li><a href="#">Massage Oils</a></li>
+                        <li><a href="#">Shower gel</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <!-- <header>Shop By concern</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Shop By concern</a></li>
+                        <li><a href="#">HairFall & Thining</a></li>
+                        <li><a href="#">DandRuff</a></li>
+                        <li><a href="#">Split Ends</a></li>
+                        <li><a href="#">Color Protection</a></li>
+                      </ul>
+                      <!-- <header>Trending Serches</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Serches</a></li>
+                        <li><a href="#">Hair Growth oil</a></li>
+                        <li><a href="#">Hair Straightners brush</a></li>
+                        <li><a href="#">Dandruff shampoos</a></li>
+                        <li><a href="#">Sulphate free shampoos</a></li>
+                        <li><a href="#">Castor Oil for hair</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Top Brands</header> -->
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Nykaa Naturals</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Wella Profesionls</a></li>
+                        <li><a href="#">L'Oreal Profesionls</a></li>
+                        <li><a href="#">BBlunt</a></li>
+                        <li><a href="#">Herbel essance</a></li>
+                        <li><a href="#">SwarzKolf</a></li>
+                        <li><a href="#">Profesionls</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                       <!-- <header>Quick Links</header> -->
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NBFA Nominees 2022</a></li>
+                        <li><a href="#">Herbal Hair Care</a></li>
+                        <li><a href="#">Routine Finder</a></li>
+                        <li><a href="#">The Beuty Intigrate Edit</a></li>
+                        <li><a href="#">The Safe  BEuty edits</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <img src="https://media.gq.com/photos/636ac1edd436f6d234f8986c/16:9/w_2560%2Cc_limit/GQB_Fragrance_Digital_16x9.jpg" alt="" height="320px" width="320px">
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">Pop Ups</a>
+                <div class="mega-box1">
+                  <div class="content">
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color: rgb(234, 241, 245);">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Face</a></li>
+                        <li><a href="#">Face Primer</a></li>
+                        <li><a href="#">Concereal</a></li>
+                        <li><a href="#">Foundation</a></li>
+                        <li><a href="#">Compact</a></li>
+                        <li><a href="#">Contour</a></li>
+                        <li><a href="#">Loose Powder</a></li>
+                        <li><a href="#">Tinted Mositurizer</a></li>
+                        <li><a href="#">Blush</a></li>
+                        <li><a href="#">Bronzer</a></li>
+                        <li><a href="#">BB & CC Cream</a></li>
+                        <li><a href="#">Highlighters</a></li>
+                        <li><a href="#">Setting Spray</a></li>
+                        <li><a href="#">Makeup remover</a></li>
+                        <li><a href="#">Sindur</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Eyes</a></li>
+                        <li><a href="#">Kajal</a></li>
+                        <li><a href="#">Eyeliner</a></li>
+                        <li><a href="#">Maskara</a></li>
+                        <li><a href="#">Eye Shadow</a></li>
+                        <li><a href="#">Eye Brow Enhancer</a></li>
+                        <li><a href="#">Eye Primer</a></li>
+                        <li><a href="#">False Eyelashes</a></li>
+                        <li><a href="#">False Makup remover</a></li>
+                        <li><a href="#">Under Eye Conceler</a></li>
+                        <li><a href="#">Contact Lances</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">MakeUp Kits and Combos</a></li>
+                        <li><a href="#">MakeUp Kits</a></li>
+                        <li><a href="#">MakeUp Combos</a></li>
+                      </ul>
+                    </div>
+                    <div class="row" >
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Lips</a></li>
+                        <li><a href="#">Lipstick</a></li>
+                        <li><a href="#">Liquid Lipstick</a></li>
+                        <li><a href="#">Lip Crayon</a></li>
+                        <li><a href="#">Lip Gloss</a></li>
+                        <li><a href="#">Lip Liner</a></li>
+                        <li><a href="#">Lip Plumper</a></li>
+                        <li><a href="#">Lip Stain</a></li>
+                      </ul>
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Nails</a></li>
+                        <li><a href="#">Nail Polish</a></li>
+                        <li><a href="#">Nail Arts Kits</a></li>
+                        <li><a href="#">Nail care</a></li>
+                        <li><a href="#">Nail Polish remover</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Tools and Brushes</a></li>
+                        <li><a href="#">Face Brush</a></li>
+                        <li><a href="#">Eye Brush</a></li>
+                        <li><a href="#">Lips Brush</a></li>
+                        <li><a href="#">Brush Sets</a></li>
+                        <li><a href="#">Brush Cleaners</a></li>
+                        <li><a href="#">Sponges & Applicators</a></li>
+                        <li><a href="#">Eyelashes curlres</a></li>
+                        <li><a href="#">Tweezers</a></li>
+                        <li><a href="#">Sharpner</a></li>
+                        <li><a href="#">Mirrors</a></li>
+                        <li><a href="#">MakeUps Pouches</a></li>
+                      </ul>
+                    <div class="row">  
+                        <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                          <li><a href="#" style="color: rgb(151, 11, 121)">Multi-Functional MakeUp</a></li>
+                        </ul> 
+                    </div>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks" style="background-color:rgb(234, 241, 245)">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Top Brands</a></li>
+                        <li><a href="#">Kay Beauty</a></li>
+                        <li><a href="#">Huda Beauty</a></li>
+                        <li><a href="#">Charlotte Tilbury</a></li>
+                        <li><a href="#">M.A.C.</a></li>
+                        <li><a href="#">Mabylline New York</a></li>
+                        <li><a href="#">L'Oreal Paris</a></li>
+                        <li><a href="#">Lakme</a></li>
+                        <li><a href="#">Nykaa Cosmetics</a></li>
+                        <li><a href="#">Nyx Pro. MakeUp</a></li>
+                      </ul>
+                    </div>
+                    <div class="row">
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Quick Links</a></li>
+                        <li><a href="#">Combos @ Nykaa</a></li>
+                        <li><a href="#">New Launches</a></li>
+                        <li><a href="#">NFBA Nominees 2022</a></li>
+                        <li><a href="#">Gift @ Nykaa</a></li>
+                        <li><a href="#">The Gift Store</a></li>
+                      </ul>
+                      <ul class="megaLinks">
+                        <li><a href="#" style="color: rgb(151, 11, 121)">Trending Searches</a></li>
+                        <li><a href="#">Nude Lipstik</a></li>
+                        <li><a href="#">Mate Lipstik</a></li>
+                        <li><a href="#">Red Lipstik</a></li>
+                        <li><a href="#">Pink Lipstik</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button id="addCart">
+                <img
+                width="80px"
+                height="45px"
+                src="spcs.webp"
+                alt="animal"
+                style="margin-bottom: -20px;"
+              </div>
+              
+            </button>
+          </nav>
+        </div>
+          <hr style="margin-top: 5px" />
+          <div class="overlay"></div>
+    
+      <div class="bag">
+        <div class="top-part">
+          <span class="close"> &times;</span>
+          <h2>Bag</h2>
+          <p><span class="total-item">0</span> items </p>
+        </div>
+        <div class="middle-part">
+          <div class="sub-middle">
+            <p>2000 reward points on new registration</p>
+            <button>Login/Register</button>
+          </div>
+          <div  class="middle-sec">
+            
+          </div>
+          <div class="cart-empty">
+            <h2>Sorry Cart is Empty</h2>
+             <a href="index.html"><button>Shopping</button></a>
+           </div>
+          <div class="coupon">
+            <h3>Appply Coupons</h3>
+            <input type="text" id="coupon-code">
+            <button class="coupon-apply">Apply</button>
+          </div>
+          <div class="price-details">
+            <h3>Price details</h3>
+             <div>
+              <div>
+                <p>bag MRP</p>
+                <p>₹ <span class="total-price"></span></p>
+              </div>
+              <div>
+                <p>bag discount</p>
+                <p class="disscount"></p>
+              </div>
+              <div>
+                <p>Shiping</p>
+                <p><span class="through">₹80</span> <span>FREE</span></p>
+              </div>
+              <div>
+                <h3>You Pay</h3>
+                <p class="payble"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-part">
+          <div>
+              <h3>₹ <span class="grand-total"></span> </h3>
+           <p>Grand total</p>
+          </div>
+          <div>
+         <a href="cart.html"> <button>Proceed</button></a>
+          <i class="fa-solid fa-arrow-right" style="color: #ebebf3;"></i>
+          </div>
+        </div>
+      </div>
+    <h1 >Bombay Shaving Company Products Collection <span id="list"></span></h1>
     <h2>All Products</h2>
     <div id="maindiv">
       <div class="row">
@@ -423,241 +1652,25 @@
     </div>
   </body>
 </html>
+<script src="navbar.js"></script>
+<script src="product.js"></script>
 <script>
-  window.addEventListener("load", function () {
-    displaydata(productData);
-  });
-
-  function handleprice() {
-    var selected = document.querySelector("#selected").value;
-    if (selected == "lth") {
-      productData.sort(function (a, b) {
-        return a.price - b.price;
-      });
-      displaydata(productData);
+    document.querySelector(".fa-solid").addEventListener("click", showbag);
+    
+    function  showbag(){
+      document.querySelector(".overlay").classList.add("overlayshow");
+      document.querySelector(".bag").classList.add("bagshow");
+    
     }
-    if (selected == "htl") {
-      productData.sort(function (a, b) {
-        return b.price - a.price;
-      });
-      displaydata(productData);
+    document.querySelector(".close").addEventListener("click", hidebag);
+    
+    function hidebag(){
+      document.querySelector(".overlay").classList.remove("overlayshow");
+      document.querySelector(".bag").classList.remove("bagshow");
     }
-  }
-  function handlerate() {
-    var selected = document.querySelector("#selected1").value;
-    if (selected == "lth") {
-      productData.sort(function (a, b) {
-        return a.rating - b.rating;
-      });
-      displaydata(productData);
+    document.querySelector(".overlay").addEventListener("click", hideb);
+    function hideb(){
+      document.querySelector(".overlay").classList.remove("overlayshow");
+      document.querySelector(".bag").classList.remove("bagshow");
     }
-    if (selected == "htl") {
-      productData.sort(function (a, b) {
-        return b.rating - a.rating;
-      });
-      displaydata(productData);
-    }
-  }
-  var productData = [
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/1937bb078928795834.jpg",
-      name: "Bombay Shaving Company Charcoal Facial Starter Kit",
-      price: 706,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/1/41f5989BOMBA00000050_1.jpg",
-      name: "Bombay Shaving Company Beard Color for Men with Henna &",
-      img1: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr1.jpg",
-      img2: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr2.jpg",
-      img3: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr4.jpg",
-      img4: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr5.jpg",
-      price: 500,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/f/df07d4fBOMBA00000045_1.jpg",
-      name: "Bombay Shaving Company Beard Trimmer with USB",
-      price: 1199,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/9/59fb2f68904330600232_apr1.jpg",
-      name: "Bombay Shaving Company Sensitive Shaving Foam",
-      price: 275,
-      rating: 5,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/6/667a113797776127320_1.jpg",
-      name: "Bombay Shaving Company Post-Shave Balm",
-      price: 395,
-      rating: 5,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/7/d/7d58dfaNYNYKBC001291_1.jpg",
-      name: "Bombay Shaving Company Veleno Perfume - Woody &",
-      price: 596,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/3/3304b4e655172771458_1.jpg",
-      name: "Bombay Shaving Company Beard Care Starter Gift Kit",
-      price: 995,
-      rating: 3,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/1/817d3ce8904330605343_1.jpg",
-      name: "Bombay Shaving Company 5-in-1 Brightening Cream",
-      price: 245,
-      rating: 2,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/8/f8aacaeBOMBA00000054_2.jpg",
-      name: "Bombay Shaving Company Back Hair Removal And Body Razor",
-      price: 200,
-      rating: 1,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/7/b7f22848904330602359_5.jpg",
-      name: "Bombay Shaving Company Turmeric And Sandalwood",
-      price: 295,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/197ac5378928795810_1pr.jpg",
-      name: "Bombay Shaving Company Beard Shaper Tool With Comb For Men (...",
-      price: 195,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/9/2919c58bomba00000073.jpg",
-      name: "Bombay Shaving Company Beard Trimming And Skin Care Kit",
-      price: 1999,
-      rating: 5,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/7/a7d9270655172771762_1.jpg",
-      name: "Bombay Shaving Company Charcoal Face Wash - 10X",
-      price: 248,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/d/dd3eeee78928796046_1.jpg",
-      name: "Bombay Shaving Company Beardinator 3 Step Beard",
-      price: 839,
-      rating: 5,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771830.jpg",
-      name: "Bombay Shaving Company Charcoal Peel Off Mask",
-      price: 229,
-      rating: 5,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/8/c8fac53bomba00000008_1pr.jpg",
-      name: "Bombay Shaving Company Defender For Her 3-in-1",
-      price: 984,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/3/1354c538904330600461_1pr.jpg",
-      name: "Bombay Shaving Company Coffee Face Wash",
-      price: 249,
-      rating: 2,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/0/e0793eanykbscom00001__1_.jpg",
-      name: "Bombay Shaving Company Beard Growth Oil (Pack Of 2)",
-      price: 295,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771090ans_1_.jpg",
-      name: "Bombay Shaving Company Exfoliating Bath Soaps 4x1",
-      price: 799,
-      rating: 5,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/n/y/nykbscom00019.jpg",
-      name: "Bombay Shaving Company His & Her - Basic Shaving Combo",
-      price: 299,
-      rating: 1,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/0/803fba68904330604186%20(1).jpg",
-      name: "Bombay Shaving Company Mini Charcoal Facial Kit",
-      price: 900,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/8/f84dc53655172771106_1pr.jpg",
-      name: "Bombay Shaving Company Activated Charcoal Bath Soap",
-      price: 374,
-      rating: 4,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/4/c4b35d2BOMBA00000124.jpg",
-      name: "Bombay Shaving Company Charcoal Face Wash (Pack Of 2)",
-      price: 1199,
-      rating: 5,
-    },
-    {
-      img_Url:
-        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771120_1a.jpg",
-      name: "Bombay Shaving Company Menthol Refreshing Bath Soap",
-      price: 449,
-      rating: 5,
-    },
-  ];
-  var nykaaproductcart = JSON.parse(localStorage.getItem("data1")) || [];
-  function displaydata(productData) {
-    document.querySelector("#container").innerHTML = "";
-    productData.map(function (elem) {
-      var box = document.createElement("div");
-      var img = document.createElement("img");
-      img.src = elem.img_Url;
-      var name = document.createElement("h5");
-      name.innerText = elem.name;
-      var price = document.createElement("p");
-      price.innerText = "MRP" + ": " + elem.price;
-      var rating = document.createElement("p");
-      rating.innerText = "Rating" + "-" + elem.rating;
-      var btn = document.createElement("button");
-      btn.innerText = "Add to Bag";
-      btn.addEventListener("click", function () {
-        addtocart(elem);
-      });
-      box.append(img, name, price, rating, btn);
-      document.querySelector("#container").append(box);
-    });
-  }
-  function addtocart(elem) {
-    nykaaproductcart.push(elem);
-    localStorage.setItem("data1", JSON.stringify(nykaaproductcart));
-    // alert("Item added to cart");
-    console.log(nykaaproductcart);
-  }
-</script>
+  </script>
