@@ -551,6 +551,12 @@ h3{
 #lot>div>h3{
   font-size: large;
 }
+#lot>div>p{
+  color: #f1827a;
+  font-size: normal;
+  font-weight: bold;
+  padding-left: 12px;
+}
 #end{
   margin-left: -40px;
   margin-right: -40px;
