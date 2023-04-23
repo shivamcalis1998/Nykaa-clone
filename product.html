@@ -372,36 +372,44 @@
 </body>
 </html>
 <script>
-
-    window.addEventListener("load",function(){
-            displaydata(productData);
-        })
     
-        function handleprice(){
+    window.addEventListener("load",function()
+    {
+            displaydata(productData);
+    })
+    function handleprice()
+    {
             var selected=document.querySelector("#selected").value
-            if(selected=="lth"){
-            productData.sort(function(a,b){
+            if(selected=="lth")
+            {
+            productData.sort(function(a,b)
+            {
             return a.price-b.price
             });
             displaydata(productData);
             }
             if(selected=="htl"){
-                productData.sort(function(a,b){
+                productData.sort(function(a,b)
+                {
                     return b.price-a.price
                 });
                 displaydata(productData);
             }
-        }
-        function handlerate(){
+    }
+        function handlerate()
+        {
             var selected = document.querySelector("#selected1").value
             if(selected=="lth"){
-                productData.sort(function(a,b){
+                productData.sort(function(a,b)
+                {
                     return a.rating-b.rating
                 });
                 displaydata(productData);
             }
-            if(selected=="htl"){
-                productData.sort(function(a,b){
+            if(selected=="htl")
+            {
+                productData.sort(function(a,b)
+                {
                     return b.rating-a.rating
                 });
                 displaydata(productData);
@@ -493,20 +501,20 @@
                rating:5,
            },
            {
-               img_Url:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771830.jpg",
-               name:"Bombay Shaving Company Charcoal Peel Off Mask",
+               img_Url:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/5/d5a7cf68904330604667_1.jpg",
+               name:"Bombay Shaving Company Tokyo Perfume For Men",
                price:229,
                rating:5,
            },
            {
-               img_Url:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/8/c8fac53bomba00000008_1pr.jpg",
-               name:"Bombay Shaving Company Defender For Her 3-in-1",
+               img_Url:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/0/6/0655172771632.jpg",
+               name:"Bombay Shaving Company Green Tea Purifying Face & Body",
                price:984,
                rating:4,
            },
            {
-               img_Url:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/3/1354c538904330600461_1pr.jpg",
-               name:"Bombay Shaving Company Coffee Face Wash",
+               img_Url:"https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/7/37fc2288904330604650_1.jpg",
+               name:"Bombay Shaving Company Man Of The Match Grooming Kit",
                price:249,
                rating:2,
            },
@@ -553,10 +561,12 @@
              rating:5,
            },
          ]
-         var nykaaproductcart=JSON.parse(localStorage.getItem("data1")) || [];
-         function displaydata(productData){
+         var productcart=JSON.parse(localStorage.getItem("data1")) || [];
+         function displaydata(productData)
+         {
           document.querySelector("#container").innerHTML="";
-          productData.map(function(elem){
+          productData.map(function(elem)
+          {
            var box=document.createElement("div");
            var img=document.createElement("img");
            img.src=elem.img_Url;
@@ -568,17 +578,19 @@
            rating.innerText="Rating"+"-"+elem.rating;
            var btn=document.createElement("button");
            btn.innerText="Add to Bag";
-           btn.addEventListener("click",function(){
+           btn.addEventListener("click",function()
+           {
                addtocart(elem);
            })
            box.append(img,name,price,rating,btn);
            document.querySelector("#container").append(box);
        });
       }
-       function addtocart(elem){
-            nykaaproductcart.push(elem);
-            localStorage.setItem("data1",JSON.stringify(nykaaproductcart));
-            alert("Item added to cart");
+       function addtocart(elem)
+       {
+            productcart.push(elem);
+            localStorage.setItem("data1",JSON.stringify(productcart));
+        //    alert("Item added to cart"); 
             console.log(nykaaproductcart);
        }
     </script>
