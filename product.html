@@ -18,6 +18,11 @@
         {
             display: flex;
         }
+        .row
+        {
+            display: flex;
+            flex-direction: column;
+        }
         #container{
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -35,11 +40,6 @@
     #container>div>h5{
         text-align: center;
     }
-    .row
-        {
-            display: flex;
-            flex-direction: column;
-        }
     #container>div>p{
         text-align: center;
         
@@ -161,13 +161,13 @@
         <div class="row">
             <select id="selected" onchange="handleprice()">
                 <option value="">Sort by Price</option>
-                <option value="lowtohigh">Low to High</option>
-                <option value="hightolow">High to Low</option>
+                <option value="lth">Low to High</option>
+                <option value="htl">High to Low</option>
                 </select>
                 <select  id="selected1" onchange="handlerate()">
                     <option value="">Sort by Rating</option>
-                    <option value="lowtohigh">Low to High</option>
-                    <option value="hightolow">High to Low</option>
+                    <option value="lth">Low to High</option>
+                    <option value="htl">High to Low</option>
                 </select>
                 <select>
                     <option value="">Category</option>
@@ -380,7 +380,7 @@
     function handleprice()
     {
             var selected=document.querySelector("#selected").value
-            if(selected=="lowtohigh")
+            if(selected=="lth")
             {
             productData.sort(function(a,b)
             {
@@ -388,7 +388,7 @@
             });
             displaydata(productData);
             }
-            if(selected=="hightolow"){
+            if(selected=="htl"){
                 productData.sort(function(a,b)
                 {
                     return b.price-a.price
@@ -399,14 +399,14 @@
         function handlerate()
         {
             var selected = document.querySelector("#selected1").value
-            if(selected=="lowtohigh"){
+            if(selected=="lth"){
                 productData.sort(function(a,b)
                 {
                     return a.rating-b.rating
                 });
                 displaydata(productData);
             }
-            if(selected=="hightolow")
+            if(selected=="htl")
             {
                 productData.sort(function(a,b)
                 {
@@ -578,18 +578,17 @@
            rating.innerText="Rating"+"-"+elem.rating;
            var btn=document.createElement("button");
            btn.innerText="Add to Bag";
-           btn.addEventListener("click",function()
-           {
+           btn.addEventListener("click",function(){
                addtocart(elem);
            })
            box.append(img,name,price,rating,btn);
            document.querySelector("#container").append(box);
        });
       }
-       function addtocart(elem)
-       {
+       function addtocart(elem){
             productcart.push(elem);
             localStorage.setItem("data1",JSON.stringify(productcart));
+        //    alert("Item added to cart"); 
             console.log(nykaaproductcart);
        }
     </script>
