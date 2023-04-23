@@ -229,6 +229,14 @@ var productData = [
     price: 449,
     rating: 5,
   },
+  {
+    id: 27,
+    image_url:
+      "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771120_1a.jpg",
+    name: "Bombay Shaving Company Menthol Refreshing Bath Soap",
+    price: 449,
+    rating: 5,
+  },
 ];
 
 function displaydata(productData) {

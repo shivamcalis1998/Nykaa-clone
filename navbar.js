@@ -168,8 +168,6 @@ function addiintols(elm) {
   });
   if (!bool) {
     cart_items.push(elm);
-    displaycart(cart_items);
-    pricecount(cart_items);
     document.querySelector(".after").textContent = cart_items.length;
     document.querySelector(".total-item").textContent = cart_items.length;
     localStorage.setItem("items", JSON.stringify(cart_items));
@@ -177,5 +175,7 @@ function addiintols(elm) {
     document.querySelector(".cart-empty").classList.add("cart-empty1");
     document.querySelector(".coupon").classList.remove("coupon1");
     document.querySelector(".price-details").classList.remove("price-details1");
+    displaycart(cart_items);
+    pricecount(cart_items);
   }
 }
