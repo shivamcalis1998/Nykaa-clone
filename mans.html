@@ -54,7 +54,10 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>mans page</title>
-    <link rel="stylesheet" href="Styles/mans.css">
+    <link rel="stylesheet" href="mans.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -67,161 +70,375 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
 
-
-
+       
     <h1 class="h11">TOP BRANDS</h1>
     <div id="grid-div">
-        <div >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/9e448da3-3735-4683-9cff-d02b916cd3b2.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>FRRE Moisturizer on ₹499+</p>
-        </div>
-        <div  >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/fd864081-49f5-4f77-87d9-7865b344bbf2.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 35% OFF</h3>
-            <p>Inspiration Of The Sea</p>
-        </div>
-        <div  >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/a21ad2b2-7ce9-4884-9d76-fd26adf08f87.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Buy 2, Get Extra 10% OFF<p>
-        </div>
-        <div  >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/186cbdd3-e247-456e-82d4-4cb5b9a85eeb.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Buy 2, Get Extra 10% OFF</p>
-        </div>
-        <div >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/b0bfc33e-74a2-4396-a20c-7aef81ca8625.jpg?tr=w-240,cm-pad_resize\" alt="">
-            </a>
-            <h3>UP to 10% OFF</h3>
-            <p>Hides Nothing</p>
-        </div>
-        <div  >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/5e15f26e-35e1-43bd-860e-ac4b1f1dfc5e.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Power & Personality</p>
-        </div>
-        <div  >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/8eb1b931-b302-41c0-b350-b1f33ad6912d.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Inspiration Of The Sea</p>
-        </div>
-        <div  >
-            <a href="">
-                <img src=" https://images-static.nykaa.com/uploads/f3bd80b7-ef85-4fe8-8745-e3db21ff322e.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Born to shine</p>
-        </div>
-        <div >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/39a99f13-247e-43c6-8dc8-27b4c9ada454.jpg?tr=w-240,cm-pad_resize " alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Never Stop Playing</p>
-        </div>
-        <div >
-            <a href="">
-                <img src=" https://images-static.nykaa.com/uploads/83fe5824-1408-41be-a579-e58f26d7ba52.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Feel Great Everyday</p>
-        </div>
-        <div >
-            <a href="">
-                <img src=" https://images-static.nykaa.com/uploads/f3bd80b7-ef85-4fe8-8745-e3db21ff322e.jpg?tr=w-240,cm-pad_resize" alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Best Offer On Combos</p>
-        </div>
-        <div >
-            <a href="">
-                <img src="https://images-static.nykaa.com/uploads/5ea3f6f3-a9ef-4f67-9c45-11aa1afe339c.jpg?tr=w-240,cm-pad_resize " alt="">
-            </a>
-            <h3>UP to 40% OFF</h3>
-            <p>Free Gift + Extra Discount</p>
-        </div>
-
     </div>
-     <h1 class="h11">Top Categories</h1>
-    <div id="category">
-        <div>
-           <a href=""> 
-            <img src="https://images-static.nykaa.com/uploads/c4ebdb12-7b5c-456f-a64a-cb05cad5ebea.png?tr=w-200,cm-pad_resize" alt="">
-        </a>
+    <script>
+        var top_brands = [
+            {
+              image_url: "https://images-static.nykaa.com/uploads/9e448da3-3735-4683-9cff-d02b916cd3b2.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 40% off",
+            name:"FREE Moisturizer on ₹499+ ",
+            },
+            {
+              image_url: "https://images-static.nykaa.com/uploads/fd864081-49f5-4f77-87d9-7865b344bbf2.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 35% off",
+            name:"Inspiration Of The Sea",
+            },
+            {
+              image_url: "https://images-static.nykaa.com/uploads/a21ad2b2-7ce9-4884-9d76-fd26adf08f87.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 40% off",
+            name:"Buy 2, Get Extra 10% OFF",
+            },
+            {
+              image_url: "https://images-static.nykaa.com/uploads/186cbdd3-e247-456e-82d4-4cb5b9a85eeb.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 30% off",
+            name:"Buy 2, Get Extra 10% OFF",
+            },
+            {
+              image_url: "https://images-static.nykaa.com/uploads/b0bfc33e-74a2-4396-a20c-7aef81ca8625.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 35% off",
+            name:"Hides Nothing",
+            },
+            {
+              image_url:"https://images-static.nykaa.com/uploads/5e15f26e-35e1-43bd-860e-ac4b1f1dfc5e.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 40% off",
+            name:"Power & Personality",
+            },
+            {
+              image_url:"https://images-static.nykaa.com/uploads/8eb1b931-b302-41c0-b350-b1f33ad6912d.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 50% off",
+            name:"Inspiration Of The Sea",
+            },
+    
+            {
+              image_url:" https://images-static.nykaa.com/uploads/f3bd80b7-ef85-4fe8-8745-e3db21ff322e.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 10% off",
+            name:"Born to shine",
+            },
+            {
+              image_url: "https://images-static.nykaa.com/uploads/39a99f13-247e-43c6-8dc8-27b4c9ada454.jpg?tr=w-240,cm-pad_resize ",
+            diss : "up to 30% off",
+            name:"Never Stop Playing",
+            },
+            {
+              image_url:" https://images-static.nykaa.com/uploads/f3bd80b7-ef85-4fe8-8745-e3db21ff322e.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 40% off",
+            name:"Feel Great Everyday",
+            },
+            {
+              image_url:" https://images-static.nykaa.com/uploads/83fe5824-1408-41be-a579-e58f26d7ba52.jpg?tr=w-240,cm-pad_resize",
+            diss : "up to 50% off",
+            name:"Best Offer On Combos",
+            },
+            {
+              image_url: "https://images-static.nykaa.com/uploads/5ea3f6f3-a9ef-4f67-9c45-11aa1afe339c.jpg?tr=w-240,cm-pad_resize ",
+            diss : "up to 90% off",
+            name:"Free Gift + Extra Discount",
+            },
+    
+        ]
+        top_brands.map(function(elm){
+                var div = document.createElement("div");
+                var a = document.createElement("a");
+                a.setAttribute("href" , "");
+                var img = document.createElement("img");
+                img.setAttribute("src" , elm.image_url);
+          a.append(img);
+          var h3 = document.createElement("h3");
+          h3.textContent = elm.diss;
+          var p=document.createElement("p");
+          p.textContent = elm.name;
+        div.append(a,h3,p);
+        document.getElementById("grid-div").append(div);
+            })
+        
+        </script>
+
+
+    <section class="product"> 
+        <h2 class="product-category">Top Category</h2>
+        <button class="pre-btn"><img src="arrow.png" alt=""></button>
+        <button class="nxt-btn"><img src="arrow.png" alt=""></button>
+        <div class="product-container">
              
         </div>
-        <div>
-            <a href=""> 
-             <img src="https://images-static.nykaa.com/uploads/bfcae510-6cb7-4367-8633-58756fc3387d.png?tr=w-200,cm-pad_resize" alt="">
-         </a>
-          
-         </div>
-         <div>
-            <a href=""> 
-             <img src="https://images-static.nykaa.com/uploads/5cb290f6-40c9-45b1-9f1a-27e13055cec6.png?tr=w-200,cm-pad_resize" alt="">
-         </a>
-            
-         </div>
-         <div>
-            <a href=""> 
-             <img src="https://images-static.nykaa.com/uploads/88cfd436-4419-4a48-8f6e-07285d4f5aff.png?tr=w-200,cm-pad_resize" alt="">
-         </a>
-             
-         </div>
-
-         <div>
-           <a href=""> 
-            <img src="https://images-static.nykaa.com/uploads/88cfd436-4419-4a48-8f6e-07285d4f5aff.png?tr=w-200,cm-pad_resize" alt="">
-        </a>
+    </section>
+    <script>
+        var product = [
+            {
+              image:"https://images-static.nykaa.com/uploads/bfcae510-6cb7-4367-8633-58756fc3387d.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image:"https://images-static.nykaa.com/uploads/fa4522d8-e9b9-4505-9b2a-e3a43f315bf0.png?tr=w-200,cm-pad_resize ",
+            },
+            {
+              image:"https://images-static.nykaa.com/uploads/c4ebdb12-7b5c-456f-a64a-cb05cad5ebea.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image:"https://images-static.nykaa.com/uploads/bfcae510-6cb7-4367-8633-58756fc3387d.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image:"https://images-static.nykaa.com/uploads/5cb290f6-40c9-45b1-9f1a-27e13055cec6.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image:"https://images-static.nykaa.com/uploads/88cfd436-4419-4a48-8f6e-07285d4f5aff.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image:"https://images-static.nykaa.com/uploads/88cfd436-4419-4a48-8f6e-07285d4f5aff.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image: "https://images-static.nykaa.com/uploads/0fcc7efb-ec2c-494f-aae1-95691760d0a7.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image:"https://images-static.nykaa.com/uploads/1d0bb453-0408-4c40-96da-2d4b586b747f.png?tr=w-200,cm-pad_resize",
+            },
+            {
+              image: "https://images-static.nykaa.com/uploads/1d0bb453-0408-4c40-96da-2d4b586b747f.png?tr=w-200,cm-pad_resize",
+            },
            
+            
+
+           
+        ]
+    
+    product.map(function(elm){
+        var div1 = document.createElement("div");
+        div1.setAttribute("class","product-card");
+        var div2 = document.createElement("div");
+        div2.setAttribute("class", "product-image");
+        var a  = document.createElement("a");
+        a.setAttribute("href" ,"");
+        var img  = document.createElement("img");
+    
+        img.setAttribute("src" , elm.image)
+        img.setAttribute("class","product-thumb")
+        a.append(img);
+        div2.append(a);
+        div1.append(div2);
+        document.querySelector(".product-container").append(div1);
+    
+        
+    })
+    
+    </script>
+    
+
+
+
+    <section class="product1"> 
+        <h2 class="product-category1">TOP BEST SELLER</h2>
+        <button class="pre-btn1"><img src="arrow.png" alt=""></button>
+        <button class="nxt-btn1"><img src="arrow.png" alt=""></button>
+        <div class="product-container1">
         </div>
-        <div>
-            <a href=""> 
-             <img src="https://images-static.nykaa.com/uploads/0fcc7efb-ec2c-494f-aae1-95691760d0a7.png?tr=w-200,cm-pad_resize" alt="">
-         </a>
+    </section>
+    <script>
+        var product1 = [
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/5/6/56d0c3a4005808231423_1.jpg?tr=w-344,h-344,cm-pad_resize",
+        description:"Nivea Man Face Wash Dark Spot Reduction",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/f/f/ff2e0b0888066075145_1.jpg",
+        description:"The Ford Ombre Leather",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/0/a0002f68904330600119_apr1.jpg",
+        description:"Bombay Seving Company Charcoal Seving Foam",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/9/8907367000983_tmc_3.jpg",
+        description:"The Man Company Argen And Geraniam  Beard Oil ",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/5/9/59f542c86800687900_1.jpg",
+        description:"Neutrogenna Ultrasheer Face ",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/2/7/27fdd6fPHIAA00000028_00.jpg",
+        description:"philips Bt12332/5 skin friendly beard trimmer ",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/9/5/95b4994748927060027_1.jpg",
+        description:"Optimum Nutrition Gold Standred Way ",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image:"https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/5/7/57c37308904223818706_1.jpg",
+        description:"ustra hair groth Vitelizer  ",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/1/6/1656cfb8011003825721_0.jpg" ,
+        description:" Versache Pure Homme Daylan Blue Eau Da toillet ",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/4/9/4902430917520_1.jpg",
+        description:"  jaguare classic Eau Da Toilette",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image: "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/9/7/97c52ce3562700373145_0.jpg" ,
+        description:" gellette Mach 3 Saving Rezor + 2 seving Blade",
+        price:20,
+        actual_price : 40,
+    
+    },
+    {
+        image: "https://images-static.nykaa.com/media/catalog/product/e/f/efc57308904223818614_1.jpg?tr=w-344,h-344,cm-pad_resize"  ,
+        description:" Ustra Beard groth Oil",
+        price:20,
+        actual_price : 40,
+    
+    },
+    ]
+    product1.map(function(elm){
+            var div1 = document.createElement("div");
+            div1.setAttribute("class","product-card1");
+            var div2 = document.createElement("div");
+            div2.setAttribute("class", "product-image1");
+            var a  = document.createElement("a");
+            a.setAttribute("href" ,"");
+            var img  = document.createElement("img");
+        
+            img.setAttribute("src" , elm.image)
+            img.setAttribute("class","product-thumb1")
+            a.append(img);
+            div2.append(a);
+    
+            var div3  =document.createElement("div");
+           div3.setAttribute("class","product-info")
+           var p = document.createElement("p");
+           p.setAttribute("class","product-short-description");
+           p.textContent = elm.description;
+       var span1 = document.createElement("span");
+       span1.setAttribute("class", "price");
+       span1.textContent =  "₹"+elm.price
+       var span2  = document.createElement("span");
+       span2.setAttribute("class","actual-price");
+       span2.textContent = "₹"+elm.actual_price
+       var a2 = document.createElement("a");
+       a2.setAttribute("href","");
+       a2.setAttribute("class","underline");
+       var p2 = document.createElement("p");
+       p2.setAttribute("class","product-detail")
+       p2.textContent = "View";
+       a2.append(p2);
+       div3.append(p,span1,span2,a2);
+            div1.append(div2,div3);
+            document.querySelector(".product-container1").append(div1);
+    
+    })
+    </script>
+
+      <h1 class="shoph1">SHOP BY CONCERN </h1>
+         <div class="concern">
+       <div>
+         <a href="">
+            <img src="https://images-static.nykaa.com/uploads/2bb534a6-bc93-42ed-b18f-a5030a28ba02.jpg?tr=w-400,cm-pad_resize" alt="">
+        </a>
+        <h3>Acne</h3>
+      </div>
+      <div>
+        <a href="">
+           <img src="https://images-static.nykaa.com/uploads/f54b76b8-98f2-4344-a758-dc5284dfcf52.png?tr=w-400,cm-pad_resize" alt="">
+       </a>
+       <h3>Oily Skin</h3>
+     </div>
+     <div>
+        <a href="">
+           <img src="https://images-static.nykaa.com/uploads/3e73c881-e114-43ac-bed4-ad5e20f63088.png?tr=w-400,cm-pad_resize" alt="">
+       </a>
+       <h3>Dry Skin</h3>
+     </div>
+     <div>
+        <a href="">
+           <img src="https://images-static.nykaa.com/uploads/e595716a-0342-4085-a39d-9f0cc5733d01.png?tr=w-400,cm-pad_resize" alt="">
+       </a>
+       <h3>Dandruff</h3>
+     </div>
+     <div>
+        <a href="">
+           <img src="https://images-static.nykaa.com/uploads/4bea8251-115d-450b-a8ac-c5beddd661ce.png?tr=w-400,cm-pad_resize" alt="">
+       </a>
+       <h3>Hair Fall</h3>
+     </div>
+     <div>
+        <a href="">
+           <img src="https://images-static.nykaa.com/uploads/175819c2-068d-4fa9-acab-6f90f28f84a0.jpg?tr=w-400,cm-pad_resize" alt="">
+       </a>
+       <h3>Dry Hair</h3>
+     </div>
+         </div>
+
+         <h1 class="shoph1">BUDGET BUY</h1>
+         <div class="budget"> 
+
+            <div>
+                <a href="">
+                    <img src="https://images-static.nykaa.com/uploads/2a74efb9-f482-42ab-aa66-f625b6d7c683.jpg?tr=w-480,cm-pad_resize" alt="">
+                </a>
+                  <h5 class="shoph2">Facewashes</h5>
+                  <p>Under ₹399</p>
+            </div>
+            <div>
+                <a href="">
+                    <img src="https://images-static.nykaa.com/uploads/712932b9-fecb-4570-a6d7-576990366283.jpg?tr=w-480,cm-pad_resize" alt="">
+                </a>
+                <h5 class="shoph2">Body Wash & Shower Gels</h5>
+                <p>Under ₹299</p>
+            </div>
+            <div>
+                <a href="">
+                    <img src="https://images-static.nykaa.com/uploads/d738c9b4-9dcc-439f-8a6b-b557c54b2f73.jpg?tr=w-480,cm-pad_resize" alt="">
+                </a>
+                <h5 class="shoph2">Whey Protein</h5>
+                <p >Under ₹1999</p>
+            </div>
+            <div>
+                <a href="">
+                    <img src="https://images-static.nykaa.com/uploads/eec97439-f38f-4352-bb1b-46e704ced4ea.jpg?tr=w-480,cm-pad_resize" alt="">
+                </a>
             
-         </div>
-         <div>
-            <a href=""> 
-             <img src="https://images-static.nykaa.com/uploads/1d0bb453-0408-4c40-96da-2d4b586b747f.png?tr=w-200,cm-pad_resize" alt="">
-         </a>
+                <h5 class="shoph2">Deodorants</h5>
+                <p >Under ₹299</p>
            
+            </div>
          </div>
-         <div>
-            <a href=""> 
-             <img src="https://images-static.nykaa.com/uploads/1d0bb453-0408-4c40-96da-2d4b586b747f.png?tr=w-200,cm-pad_resize" alt="">
-         </a>
-           
-         </div>
-         <div>
-            <a href=""> 
-             <img src="https://images-static.nykaa.com/uploads/fa4522d8-e9b9-4505-9b2a-e3a43f315bf0.png?tr=w-200,cm-pad_resize " alt="">
-         </a>
-           
-         </div>
-         
-
-
-
-    </div>
 </body>
 
 </html>
-=======
+ <script src="mans.js">
 
->>>>>>> 12fe0dfd3edc43190df3352707d2cdfbe1c2749b
+ </script>
+  
+ 
