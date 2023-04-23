@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT PAGE</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      #maindiv {
+        display: flex;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+      }
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 110px;
+        margin-right: 125px;
+        gap: 20px;
+      }
+      #container > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin: 20px;
+      }
+      #container > div > img {
+        margin-left: 30px;
+      }
+      #container > div > h5 {
+        text-align: center;
+      }
+      #container > div > p {
+        text-align: center;
+      }
+
+      @media all and(min-width: 421px) and (max-width: 780px) {
+        #container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      #container > div > button {
+        border: none;
+        border-radius: 10px;
+        height: 50px;
+        width: 200px;
+        background-color: palevioletred;
+        color: white;
+        font-weight: bolder;
+        margin-left: 35px;
+        margin-right: 20px;
+      }
+      #container > div:hover {
+        cursor: pointer;
+      }
+      #container > div > button:hover {
+        cursor: pointer;
+      }
+      select {
+        border: none;
+        width: 200px;
+        height: 50px;
+        margin-left: 20px;
+        background-color: white;
+        font-weight: bold;
+        vertical-align: bottom;
+      }
+      #container1 {
+        background-color: rgb(63, 65, 77);
+        display: flex;
+        justify-content: space-evenly;
+        padding: 22px;
+      }
+      #container1 > div {
+        width: 20%;
+        font-size: 13px;
+        line-height: 20px;
+        word-spacing: 5px;
+      }
+      #container1 img {
+        margin-top: -5px;
+        margin-right: 5px;
+        width: 10%;
+      }
+
+      #container2 {
+        background-color: rgb(140, 141, 148);
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #container2 > div {
+        color: white;
+        margin: 50px 0px 0px 40px;
+      }
+      #container2 p {
+        margin-bottom: 12px;
+      }
+      #container3 {
+        display: flex;
+        justify-content: center;
+      }
+      .container3a {
+        display: flex;
+        justify-content: space-between;
+        padding: 19px;
+        width: 15%;
+        margin: 50px 0px;
+        font-size: 15px;
+      }
+      .container3a img {
+        margin-right: 15px;
+        margin-top: 15px;
+      }
+      .container3a p {
+        margin-bottom: -20px;
+      }
+      #container3a1 {
+        width: 12%;
+        padding: 20px;
+        margin: 50px 0px;
+        font-size: 11px;
+        text-align: center;
+      }
+      #container3a13 {
+        display: flex;
+        justify-content: space-around;
+      }
+      #container4 {
+        background-color: #fc2779;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        padding: 5px;
+      }
+      #container4 div {
+        margin-right: 20px;
+      }
+      #punit {
+        display: flex;
+        margin-bottom: -10px;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bombay Shaving Company Products Collection (27)</h1>
+    <h2>All Products</h2>
+    <div id="maindiv">
+      <div class="row">
+        <select id="selected" onchange="handleprice()">
+          <option value="">Sort by Price</option>
+          <option value="lth">Low to High</option>
+          <option value="htl">High to Low</option>
+        </select>
+        <select id="selected1" onchange="handlerate()">
+          <option value="">Sort by Rating</option>
+          <option value="lth">Low to High</option>
+          <option value="htl">High to Low</option>
+        </select>
+        <select>
+          <option value="">Category</option>
+        </select>
+        <select>
+          <option value="">Discount</option>
+        </select>
+        <select>
+          <option value="">Skin Type</option>
+        </select>
+        <select>
+          <option value="">Preference</option>
+        </select>
+        <select>
+          <option value="">Concern</option>
+        </select>
+        <select>
+          <option value="">Gender</option>
+        </select>
+        <select>
+          <option value="">Formulation</option>
+        </select>
+        <select>
+          <option value="">Ingredient</option>
+        </select>
+        <select>
+          <option value="">Brand</option>
+        </select>
+        <select>
+          <option value="">Offers</option>
+        </select>
+      </div>
+      <div id="container"></div>
+    </div>
+    <br />
+    <div id="container1">
+      <div>
+        <div style="display: flex; margin-bottom: 20px">
+          <img
+            src="D:\masai project\teamNakya\footer\Mail-logo.png"
+            alt="mail"
+          />
+          <span style="color: white">Get special discount on your inbox</span>
+        </div>
+        <div>
+          <input
+            style="
+              background-color: rgb(243, 244, 247);
+              height: 25px;
+              color: black;
+              margin-right: -10px;
+            "
+            type="email"
+            placeholder="Your Email"
+          />
+          <input style="height: 30px" type="Submit" value="Send" />
+        </div>
+      </div>
+      <div>
+        <div style="display: flex">
+          <img
+            src="D:\masai project\teamNakya\footer\Phone.png"
+            alt="small phone"
+          />
+          <p style="color: white">EXPERIENCE THE NYKAA MOBILE APP</p>
+        </div>
+        <div style="display: flex">
+          <img
+            style="width: 35%"
+            src="D:\masai project\teamNakya\footer\Google_Play.png"
+            alt="`gogle play"
+          />
+          <img
+            style="width: 35%"
+            src="D:\masai project\teamNakya\footer\App_Store_Logo1.png"
+            alt="App Store"
+          />
+        </div>
+      </div>
+      <div>
+        <div style="display: flex">
+          <img
+            src="D:\masai project\teamNakya\footer\Call-ring.png"
+            alt="small phone ring"
+          />
+          <span style="color: white"
+            >FOR ANY HELP YOU MAY CALL US AT<br />1800-267-4444</span
+          >
+        </div>
+        <p style="color: white; margin: 10px">
+          (Monday to Saturday, 8AM to 10PM and Sunday, 10AM to 7PM)
+        </p>
+      </div>
+    </div>
+
+    <div id="container2">
+      <div>
+        <i style="font-size: xx-large"><b>NYKAA</b></i>
+        <p style="margin-top: 20px">Who are we?</p>
+        <p>Careers</p>
+        <p>Authenticity</p>
+        <p>Press</p>
+        <p>Testimonials</p>
+        <p>Nykaa CSR</p>
+        <p>Responsible Disclosure</p>
+        <p>Investor Relations</p>
+      </div>
+      <div>
+        <p>Help</p>
+        <p>Contect Us</p>
+        <p>Frequently asked questions</p>
+        <p>Store Locator</p>
+        <p>Cancellation & Return</p>
+        <p>Shipping & Delivery</p>
+        <p>Sell on Nykaa</p>
+      </div>
+      <div>
+        <p>Inspire Me</p>
+        <p>Beauty Book</p>
+        <p>Nykaa Tv</p>
+        <p>Nykaa Network</p>
+        <p>Buying Guides</p>
+      </div>
+      <div>
+        <p>Quick Links</p>
+        <p>Offer Zone</p>
+        <p>New Launches</p>
+        <p>Nykaa Man</p>
+        <p>Nykaa Fashion</p>
+        <p>Nykaa pro</p>
+      </div>
+      <div>
+        <p>Top Categories</p>
+        <p>Makeup</p>
+        <p>skin</p>
+        <p>Hair</p>
+        <p>Bath & Body</p>
+        <p>Appliances</p>
+        <p>Mom and baby</p>
+        <p>Wellness</p>
+        <p>Fragrance</p>
+        <p>Natural</p>
+        <p>Luxe</p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="container3">
+      <div class="container3a">
+        <div>
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg"
+            alt="trucklogo"
+          />
+        </div>
+        <div>
+          <p>FREE SHIPPING</p>
+          <br />
+          <hr />
+          <p>On Orders Above ₹299</p>
+        </div>
+      </div>
+      <div class="container3a">
+        <div>
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg"
+            alt="return"
+          />
+        </div>
+        <div>
+          <p>EASY RETURNS</p>
+          <br />
+          <hr />
+          <p>15-Day Return Policy</p>
+        </div>
+      </div>
+      <div class="container3a">
+        <div>
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg"
+            alt="auth"
+          />
+        </div>
+        <div>
+          <p>100% <br />AUTHENTIC</p>
+          <br />
+          <hr />
+          <p>Products Sourced Directly</p>
+        </div>
+      </div>
+      <div class="container3a">
+        <div>
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg"
+            alt="brand"
+          />
+        </div>
+        <div>
+          <p>1900+ BRANDS</p>
+          <br />
+          <hr />
+          <p>1.2 Lakh+ Products</p>
+        </div>
+      </div>
+      <div id="container3a1">
+        <div>
+          <p>Show us some love ❤ on social media</p>
+        </div>
+        <div id="container3a13">
+          <div>
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg"
+              alt="insta"
+            />
+          </div>
+          <div>
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg"
+              alt="facebook"
+            />
+          </div>
+          <div>
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg"
+              alt="youtube"
+            />
+          </div>
+          <div>
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-twitter-filled.svg"
+              alt="twitter"
+            />
+          </div>
+          <div>
+            <img
+              src="https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg"
+              alt="pinterest"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div id="container4">
+      <div id="punit">
+        <div>
+          <p>Terms & Conditions</p>
+        </div>
+        <div><p>Shipping Policy</p></div>
+        <div>
+          <p>Cancellation Policy</p>
+        </div>
+        <div><p>Privacy Policy</p></div>
+      </div>
+      <div>
+        <p>© 2023 Nykaa E-Retail Pvt. Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  window.addEventListener("load", function () {
+    displaydata(productData);
+  });
+
+  function handleprice() {
+    var selected = document.querySelector("#selected").value;
+    if (selected == "lth") {
+      productData.sort(function (a, b) {
+        return a.price - b.price;
+      });
+      displaydata(productData);
+    }
+    if (selected == "htl") {
+      productData.sort(function (a, b) {
+        return b.price - a.price;
+      });
+      displaydata(productData);
+    }
+  }
+  function handlerate() {
+    var selected = document.querySelector("#selected1").value;
+    if (selected == "lth") {
+      productData.sort(function (a, b) {
+        return a.rating - b.rating;
+      });
+      displaydata(productData);
+    }
+    if (selected == "htl") {
+      productData.sort(function (a, b) {
+        return b.rating - a.rating;
+      });
+      displaydata(productData);
+    }
+  }
+  var productData = [
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/1937bb078928795834.jpg",
+      name: "Bombay Shaving Company Charcoal Facial Starter Kit",
+      price: 706,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/4/1/41f5989BOMBA00000050_1.jpg",
+      name: "Bombay Shaving Company Beard Color for Men with Henna &",
+      img1: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr1.jpg",
+      img2: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr2.jpg",
+      img3: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr4.jpg",
+      img4: "https://images-static.nykaa.com/media/catalog/product/a/0/a0002f68904330600119_apr5.jpg",
+      price: 500,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/f/df07d4fBOMBA00000045_1.jpg",
+      name: "Bombay Shaving Company Beard Trimmer with USB",
+      price: 1199,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/5/9/59fb2f68904330600232_apr1.jpg",
+      name: "Bombay Shaving Company Sensitive Shaving Foam",
+      price: 275,
+      rating: 5,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/6/667a113797776127320_1.jpg",
+      name: "Bombay Shaving Company Post-Shave Balm",
+      price: 395,
+      rating: 5,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/7/d/7d58dfaNYNYKBC001291_1.jpg",
+      name: "Bombay Shaving Company Veleno Perfume - Woody &",
+      price: 596,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/3/3304b4e655172771458_1.jpg",
+      name: "Bombay Shaving Company Beard Care Starter Gift Kit",
+      price: 995,
+      rating: 3,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/1/817d3ce8904330605343_1.jpg",
+      name: "Bombay Shaving Company 5-in-1 Brightening Cream",
+      price: 245,
+      rating: 2,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/8/f8aacaeBOMBA00000054_2.jpg",
+      name: "Bombay Shaving Company Back Hair Removal And Body Razor",
+      price: 200,
+      rating: 1,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/b/7/b7f22848904330602359_5.jpg",
+      name: "Bombay Shaving Company Turmeric And Sandalwood",
+      price: 295,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/9/197ac5378928795810_1pr.jpg",
+      name: "Bombay Shaving Company Beard Shaper Tool With Comb For Men (...",
+      price: 195,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/2/9/2919c58bomba00000073.jpg",
+      name: "Bombay Shaving Company Beard Trimming And Skin Care Kit",
+      price: 1999,
+      rating: 5,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/a/7/a7d9270655172771762_1.jpg",
+      name: "Bombay Shaving Company Charcoal Face Wash - 10X",
+      price: 248,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/d/d/dd3eeee78928796046_1.jpg",
+      name: "Bombay Shaving Company Beardinator 3 Step Beard",
+      price: 839,
+      rating: 5,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771830.jpg",
+      name: "Bombay Shaving Company Charcoal Peel Off Mask",
+      price: 229,
+      rating: 5,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/8/c8fac53bomba00000008_1pr.jpg",
+      name: "Bombay Shaving Company Defender For Her 3-in-1",
+      price: 984,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/1/3/1354c538904330600461_1pr.jpg",
+      name: "Bombay Shaving Company Coffee Face Wash",
+      price: 249,
+      rating: 2,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/e/0/e0793eanykbscom00001__1_.jpg",
+      name: "Bombay Shaving Company Beard Growth Oil (Pack Of 2)",
+      price: 295,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771090ans_1_.jpg",
+      name: "Bombay Shaving Company Exfoliating Bath Soaps 4x1",
+      price: 799,
+      rating: 5,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/n/y/nykbscom00019.jpg",
+      name: "Bombay Shaving Company His & Her - Basic Shaving Combo",
+      price: 299,
+      rating: 1,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/0/803fba68904330604186%20(1).jpg",
+      name: "Bombay Shaving Company Mini Charcoal Facial Kit",
+      price: 900,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/f/8/f84dc53655172771106_1pr.jpg",
+      name: "Bombay Shaving Company Activated Charcoal Bath Soap",
+      price: 374,
+      rating: 4,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/c/4/c4b35d2BOMBA00000124.jpg",
+      name: "Bombay Shaving Company Charcoal Face Wash (Pack Of 2)",
+      price: 1199,
+      rating: 5,
+    },
+    {
+      img_Url:
+        "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/6/5/655172771120_1a.jpg",
+      name: "Bombay Shaving Company Menthol Refreshing Bath Soap",
+      price: 449,
+      rating: 5,
+    },
+  ];
+  var nykaaproductcart = JSON.parse(localStorage.getItem("data1")) || [];
+  function displaydata(productData) {
+    document.querySelector("#container").innerHTML = "";
+    productData.map(function (elem) {
+      var box = document.createElement("div");
+      var img = document.createElement("img");
+      img.src = elem.img_Url;
+      var name = document.createElement("h5");
+      name.innerText = elem.name;
+      var price = document.createElement("p");
+      price.innerText = "MRP" + ": " + elem.price;
+      var rating = document.createElement("p");
+      rating.innerText = "Rating" + "-" + elem.rating;
+      var btn = document.createElement("button");
+      btn.innerText = "Add to Bag";
+      btn.addEventListener("click", function () {
+        addtocart(elem);
+      });
+      box.append(img, name, price, rating, btn);
+      document.querySelector("#container").append(box);
+    });
+  }
+  function addtocart(elem) {
+    nykaaproductcart.push(elem);
+    localStorage.setItem("data1", JSON.stringify(nykaaproductcart));
+    // alert("Item added to cart");
+    console.log(nykaaproductcart);
+  }
+</script>
