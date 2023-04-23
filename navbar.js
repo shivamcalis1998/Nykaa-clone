@@ -179,3 +179,10 @@ function addiintols(elm) {
     pricecount(cart_items);
   }
 }
+var userData = JSON.parse(localStorage.getItem("user-data"));
+
+userData.map(function (el) {
+  if (el.hasOwnProperty("value")) {
+    document.getElementById("button1").textContent = el.name;
+  }
+});
