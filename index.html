@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #parent {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    img {
+      width: 40%;
+
+    }
+
+    #parent>div {
+      box-shadow: 10px 5px 5px rgb(223, 224, 207);
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* .head {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: aqua;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .cart-box {
+      width: 26%;
+      position: absolute;
+      top: 25%;
+      left: 72%;
+      border: 1px solid red;
+      padding: 10px 10px;
+     
+   
+      
+    
+    }
+    :root{
+      --after-content:'2';
+    }
+
+    h2 {
+      font-size: x-large;
+      padding: 15px 10px;
+    }
+
+    .cart-wrapper {
+      overflow-y: auto;
+      max-height: 40vh;
+    }
+
+    .subtotal {
+      text-align: right;
+      padding: 5px;
+    }
+
+    .checkout,
+    .viewcart {
+      width: 96%;
+      text-align: center;
+      cursor: pointer;
+      background-color: #e51f1f;
+      color: azure;
+      font-size: large;
+      margin: 10px auto;
+      padding: 10px auto;
+
+    }
+
+    .viewcart {
+      background-color: white;
+      border: 2px solid brown;
+      color: brown;
+    }
+
+    .cart-icon {
+      text-align: right;
+    }
+    .cart-val{
+    
+      display: grid;
+      grid-template-columns: 3fr 6fr 1fr;
+      padding: 5% 2%;
+      border-bottom:  solid 2px lightgray;
+      
+    }
+    .cart-val img{
+      width: 100%;
+    }
+
+    .cart-val .details{
+       padding-left: 10%;
+       
+    }
+.cart-val h3{
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.cart-val .price{
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
+.quantity{
+  display: block;
+  margin-top: 5%;
+}
+
+.cencel{
+  text-align: right;
+}
+.cartwindow{
+  position: fixed;
+  top: 12vh;
+
+  border:solid lightgray 1px;
+  background-color: #fff;
+  border-top: none;
+  margin-right: 2%;
+}
+/* .hide{
+  display: none;
+} */
+    /* .non-empty::after{
+content:var(--after-content);
+font-size: 20px;
+width: 25px;
+background-color: #fff;
+display: inline-block;
+text-align: center;
+align-items: center;
+position:relative;
+
+top: -20px;
+right: 14%;
+height: 25px;
+ 
+border-radius: 50%;
+ 
+color: rgb(232, 14, 14);
+} */
+
+    .overlay {
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      top: 0;
+      z-index: -1;
+      opacity: 0;
+      transition: .5s;
+    }
+.overlayshow{
+  opacity: 1;
+  z-index: 1;
+}
+    .bag {
+      width: 32%;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      right: -50%;
+      z-index: 9;
+      height: 100vh;
+      border: 1px solid gray;
+      transition: 1s;
+    }
+    .bagshow{
+     right: 0px;
+
+    }
+
+    @media screen and (max-width: 500px) {
+  #parent{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .bag{
+     right: 0px; 
+     width: 90%; 
+  }
+}
+
+    .cart-symbol {
+      margin-top: 20px;
+      text-align: right;
+      margin-bottom: 10px;
+      margin-right: 20px;
+
+    }
+
+    .top-part {
+      display: flex;
+      align-items: center;
+      border-bottom: solid 1px gray;
+      gap: 2%;
+    }
+
+    .close {
+      font-size: 40px;
+      font-weight: 500;
+      left: 0;
+      width: 60px;
+      cursor: pointer;
+      line-height: 30px;
+      height: 30px;
+      text-align: center;
+
+    }
+
+    .top-part p {
+      margin-top: 22px;
+
+    }
+
+    .top-part h2 {
+      margin-left: -10px;
+    }
+
+    .sub-middle {
+      margin: 20px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      padding: 10px;
+    }
+
+    .sub-middle p {
+      margin-top: -0px;
+    }
+
+    .sub-middle button {
+      width: 100%;
+      padding: 7px;
+      background: transparent;
+      color: crimson;
+      border-style: none;
+      border: 1px solid gray;
+      border-radius: 10px;
+    }
+
+    .middle-part {
+      overflow-y: auto;
+      max-height: 78vh;
+      
+    }
+
+    .middle-sec {
+      margin: 20px;
+      border: 1px solid gray;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 3fr 6fr 1fr;
+      padding: 10px;
+    }
+
+    .details img {
+      width: 100%;
+    }
+
+    .cencel {
+      text-align: right;
+    }
+
+    .details p {
+      margin-top: 0px;
+      margin-left: 10px;
+      font-size: 12px;
+    }
+
+    .hori {
+      width: 90%;
+      margin: auto;
+    }
+
+    .horiend {
+      width: 100%;
+      margin: auto;
+    }
+
+    #quantity {
+      border-style: none;
+    }
+
+    .quan {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      margin: -10px auto;
+
+    }
+
+    .coupon {
+      border: 1px solid gray;
+      margin: 20px;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    .coupon h3 {
+      margin-top: 0px;
+      margin-bottom: 15px;
+    }
+
+    #coupon-code {
+      width: 65%;
+      height: 25px;
+
+    }
+
+    .coupon button {
+      background-color: crimson;
+      width: 70px;
+      height: 31px;
+      border-style: none;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .price-details {
+      border: 1px solid gray;
+      margin: 20px;
+      border-radius: 4px;
+      padding: 15px;
+
+    }
+
+    .price-details >div >div {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -15px;
+      
+    }
+    .price-details >div{
+      margin-bottom: -5px;
+    }
+
+    .through {
+      text-decoration: line-through;
+    }
+    .through +span{
+      color: crimson;
+    }
+    .bottom-part{
+      
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      
+    }
+    .bottom-part h3{
+      margin: 7px;
+      margin-bottom: -15px;
+    }
+    .bottom-part p{
+      font-size: 13px;
+      margin-left: 7px;
+      margin-top: 18px;
+    }
+    .bottom-part >div:last-child{
+      width: 50%;
+      padding: 8px;
+    }
+    .bottom-part button{
+      width: 100%;
+      height: 90%;
+      text-align: left;
+      background-color: rgb(220, 42, 78);
+      border-style: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 15px;
+    }
+  .fa-arrow-right{
+    position: relative;
+    right: -80%;
+    top: -70%;
+    font-size: 25px;
+  }
+  
+ 
+  .after{
+    display: inline;
+    color: rgb(225, 11, 11);
+    position:absolute;
+    right: 20px;
+  top: 0px;
+  background-color: #eae8e8;
+  width: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 500;
+  z-index: -1;
+  }
+  .afterr{
+    display: none;
+  }
+  #product-details{
+    border: 1px solid gray;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+ .cart-empty{
+  text-align: center;
+  color: rgb(225, 11, 11);
+  height: 50vh;
+ }
+ .cart-empty button{
+  width: 40%;
+  height: 45px;
+  background-color: red;
+  color: #fff;
+  font-size: 16px;
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+ }
+ .middle-sec1{
+ display: none;
+ }
+ .cart-empty1{
+  display: none;
+ }
+.coupon1{
+  display: none;
+}
+.price-details1{
+  display: none;
+}
+  </style>
+  <script src="https://kit.fontawesome.com/eed82eddcd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="cart-symbol">
+    <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl non-empty" style="color: #292929;"></i>
+    <div class="after">0</div>
+  </div>
+  <!-- <div id="parent"></div> -->
+  <div class="overlay"></div>
+
+  <div class="bag">
+    <div class="top-part">
+      <span class="close"> &times;</span>
+      <h2>Bag</h2>
+      <p><span class="total-item">0</span> items </p>
+    </div>
+    <div class="middle-part">
+      <div class="sub-middle">
+        <p>2000 reward points on new registration</p>
+        <button>Login/Register</button>
+      </div>
+      <div  class="middle-sec">
+        
+      </div>
+      <div class="cart-empty">
+        <h2>Sorry Cart is Empty</h2>
+         <a href="index.html"><button>Shopping</button></a>
+       </div>
+      <div class="coupon">
+        <h3>Appply Coupons</h3>
+        <input type="text" id="coupon-code">
+        <button class="coupon-apply">Apply</button>
+      </div>
+      <div class="price-details">
+        <h3>Price details</h3>
+         <div>
+          <div>
+            <p>bag MRP</p>
+            <p>₹ <span class="total-price"></span></p>
+          </div>
+          <div>
+            <p>bag discount</p>
+            <p class="disscount"></p>
+          </div>
+          <div>
+            <p>Shiping</p>
+            <p><span class="through">₹80</span> <span>FREE</span></p>
+          </div>
+          <div>
+            <h3>You Pay</h3>
+            <p class="payble"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-part">
+      <div>
+          <h3>₹ <span class="grand-total"></span> </h3>
+       <p>Grand total</p>
+      </div>
+      <div>
+     <a href="cart.html"> <button>Proceed</button></a>
+      <i class="fa-solid fa-arrow-right" style="color: #ebebf3;"></i>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+
+
+
+  var womensData = [
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      id: 2,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      id: 3,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      id: 4,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 5,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 6,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      id: 7,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      id: 8,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      id: 9,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      id: 10,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 11,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 12,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+      price: 949,
+      strikedoffprice: 1899,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+      price: 949,
+      strikedoffprice: 1899,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+      price: 949,
+      strikedoffprice: 1899,
+    },
+    {
+      id: 1,
+
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+      price: 949,
+      strikedoffprice: 1899,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      id: 1,
+      image_url:
+        "https://rukminim1.flixcart.com/image/832/832/klwmufk0/dress/u/b/w/l-wdb003-roarers-original-imagyxjevkhchy3r.jpeg?q=70",
+      name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+      price: 949,
+      strikedoffprice: 1899,
+    },
+  ];
+
+
+  womensData.map(function (elm) {
+    elm.image_url = "https://rukminim1.flixcart.com/image/832/832/xif0q/slipper-flip-flop/d/d/c/7-ori-mm-1887-earton-grey-original-imagkykzkqp6sfu8.jpeg?q=70"
+    var div = document.createElement("div");
+
+    var image = document.createElement("img");
+    image.setAttribute("src", elm.image_url);
+
+    var p = document.createElement("p");
+    p.textContent = elm.name;
+
+    var p1 = document.createElement("p");
+    p1.textContent = "₹" + " " + elm.price;
+
+    var btn = document.createElement("button");
+    btn.setAttribute("id", "btnhov");
+    btn.textContent = "add to Cart";
+    btn.addEventListener("click", function () {
+      addiintols(elm)
+    })
+
+    div.append(image, p, p1, btn);
+    document.getElementById("parent").append(div);
+
+  })
+   
+
+
+  // display all cart thing form local storage  
+  function displaycart(arr){
+    document.querySelector(".middle-sec").textContent ="";
+    arr.map(function(elm,index){
+
+   
+    var div_dl =  document.createElement("div")
+    div_dl.setAttribute("class","details")
+
+        
+
+        var div1 = document.createElement("div")
+        var div2 = document.createElement("div")
+        var div3 =  document.createElement("div")
+           var img  = document.createElement("img")
+           img.setAttribute("src" , elm.image_url)
+           div1.append(img)
+           var p = document.createElement("p")
+
+           p.textContent = elm.name;
+           div2.append(p);
+           div3.setAttribute("class", "cencel")
+           var i = document.createElement("i")
+          
+           i.setAttribute("class", "fa-solid fa-trash-can")
+          
+           i.style.color = "red"
+          
+           div3.append(i)
+ 
+           div_dl.append(div1,div2,div3);
+           var hr  =  document.createElement("hr");
+          hr.setAttribute("class","hori")
+var div_quan = document.createElement("div")
+
+div_quan.setAttribute("class","quan")
+
+var select  = document.createElement("select")
+select.setAttribute("id" , "quantity")
+var op1 = document.createElement("option")
+op1.setAttribute("value","");
+op1.textContent = "quantity :"
+var span = document.createElement("span")
+span.textContent = 1;
+span.setAttribute("class","acutal_quantity")
+op1.append(span);
+var op2 = document.createElement("option")
+op2.setAttribute("value","1");
+op2.textContent = "1"
+var op3 = document.createElement("option")
+op3.setAttribute("value","2");
+op3.textContent = "2"
+var op4 = document.createElement("option")
+op4.setAttribute("value","3");
+op4.textContent = "3"
+select.append(op1,op2,op3,op4)
+var p2 =document.createElement("p")
+p.setAttribute("class","total-price-same")
+p2.textContent  = "₹" + elm.price
+
+div_quan.append(select,p2);
+ 
+var div_pro =document.createElement("div");
+div_pro.setAttribute("id","product-details")
+div_pro.append(div_dl,hr,div_quan)
+ document.querySelector(".middle-sec").append( div_pro)
+
+  i.addEventListener("click", function(){
+    deleteItem(index)
+  })
+
+})
+  }
+
+
+  function deleteItem(index){
+    cart_items.splice(index,1);
+    localStorage.setItem("items", JSON.stringify(cart_items));
+    displaycart(cart_items);
+      pricecount(cart_items);
+      document.querySelector(".total-item").textContent = cart_items.length
+      if( cart_items.length >0){
+        document.querySelector(".middle-sec").classList.remove(".middle-sec1")
+        document.querySelector(".after").classList.remove("afterr")
+        document.querySelector(".cart-empty").classList.add("cart-empty1")
+      document.querySelector(".coupon").classList.remove("coupon1")
+      document.querySelector(".price-details").classList.remove("price-details1")
+      document.querySelector(".after").textContent =  cart_items.length
+      }else{
+        document.querySelector(".after").classList.add("afterr")
+        document.querySelector(".middle-sec").classList.add(".middle-sec1")
+      document.querySelector(".cart-empty").classList.remove("cart-empty1")
+      document.querySelector(".coupon").classList.add("coupon1")
+      document.querySelector(".price-details").classList.add("price-details1")
+      }
+  }
+
+
+  // count all prices 
+
+function pricecount(arr){
+  var total = arr.reduce(function(acc, cur){
+return acc + cur.price
+  },0)
+ document.querySelector(".total-price").textContent = total
+    
+ if(total > 5000){
+  document.querySelector(".disscount").textContent= (total * 0.1).toFixed(0)
+  document.querySelector(".payble").textContent = total - (total * 0.1).toFixed(0)
+  document.querySelector(".grand-total").textContent = total - (total * 0.1).toFixed(0)
+ }else{
+  document.querySelector(".disscount").textContent= 0;
+  document.querySelector(".payble").textContent = total   
+  document.querySelector(".grand-total").textContent = total 
+ } 
+
+}
+
+document.querySelector(".coupon-apply").addEventListener("click", getdisscount)
+
+function getdisscount(){
+  var total = cart_items.reduce(function(acc, cur){
+return acc + cur.price
+},0)
+var code  = document.querySelector("#coupon-code").value;
+ 
+if(code === "masai30"){
+document.querySelector(".disscount").textContent= (total * 0.3).toFixed(0)
+document.querySelector(".payble").textContent = (total * 0.7).toFixed(0)
+document.querySelector(".grand-total").textContent = (total * 0.7).toFixed(0)
+document.querySelector("#coupon-code").value = ""
+}
+else if(code === "masai20"){
+document.querySelector(".disscount").textContent= (total * 0.2).toFixed(0)
+document.querySelector(".payble").textContent = (total * 0.8).toFixed(0)
+document.querySelector(".grand-total").textContent =(total * 0.8).toFixed(0)
+document.querySelector("#coupon-code").value ="";
+}else{
+  document.querySelector("#coupon-code").value = "invalid code"
+}
+}
+
+// take data from local storege 
+  var cart_items = JSON.parse(localStorage.getItem("items")) || [];
+
+  if(cart_items.length >0){
+    document.querySelector(".middle-sec").classList.remove(".middle-sec1")
+      document.querySelector(".cart-empty").classList.add("cart-empty1")
+      document.querySelector(".coupon").classList.remove("coupon1")
+      document.querySelector(".price-details").classList.remove("price-details1")
+    document.querySelector(".after").textContent = cart_items.length;
+     document.querySelector(".total-item").textContent = cart_items.length
+     displaycart(cart_items);
+    pricecount(cart_items)
+
+    }else{
+      document.querySelector(".after").classList.add("afterr")
+      document.querySelector(".middle-sec").classList.add(".middle-sec1")
+      document.querySelector(".cart-empty").classList.remove("cart-empty1")
+      document.querySelector(".coupon").classList.add("coupon1")
+      document.querySelector(".price-details").classList.add("price-details1")
+
+    }
+
+  function addiintols(elm) {
+ 
+      document.querySelector(".after").classList.remove("afterr");
+
+    var id = elm.id;
+    var bool = false;
+    cart_items.map(function(el){
+      if(id === el.id){
+      bool = true;
+      }
+    })
+    if(!bool){
+      cart_items.push(elm)
+      displaycart(cart_items);
+      pricecount(cart_items)
+    document.querySelector(".after").textContent =cart_items.length;
+    document.querySelector(".total-item").textContent = cart_items.length;
+    localStorage.setItem("items", JSON.stringify(cart_items));
+    document.querySelector(".middle-sec").classList.remove(".middle-sec1")
+      document.querySelector(".cart-empty").classList.add("cart-empty1")
+      document.querySelector(".coupon").classList.remove("coupon1")
+      document.querySelector(".price-details").classList.remove("price-details1")
+    } 
+  }
+
+ 
+
+</script>
+
+
+<!-- diffrent part from you tube part -->
+<script>
+document.querySelector(".fa-solid").addEventListener("click", showbag);
+
+function  showbag(){
+  document.querySelector(".overlay").classList.add("overlayshow");
+  document.querySelector(".bag").classList.add("bagshow");
+
+}
+document.querySelector(".close").addEventListener("click", hidebag);
+
+function hidebag(){
+  document.querySelector(".overlay").classList.remove("overlayshow");
+  document.querySelector(".bag").classList.remove("bagshow");
+}
+document.querySelector(".overlay").addEventListener("click", hideb);
+function hideb(){
+  document.querySelector(".overlay").classList.remove("overlayshow");
+  document.querySelector(".bag").classList.remove("bagshow");
+}
+
+</script>
