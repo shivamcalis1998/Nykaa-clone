@@ -244,7 +244,10 @@ function displaydata(productData) {
   productData.map(function (elem) {
     var box = document.createElement("div");
     var img = document.createElement("img");
+    var anchor = document.createElement("a");
+    anchor.setAttribute("href", "nyoad.html");
     img.src = elem.image_url;
+    anchor.append(img);
     var name = document.createElement("h5");
     name.innerText = elem.name;
     var price = document.createElement("p");
@@ -256,13 +259,11 @@ function displaydata(productData) {
     btn.addEventListener("click", function () {
       addtocart(elem);
     });
-    box.append(img, name, price, rating, btn);
+    box.append(anchor, name, price, rating, btn);
     document.querySelector("#container").append(box);
   });
 }
 document.getElementById("list").textContent = "(" + productData.length + ")";
-
- 
 
 function displaycart(arr) {
   document.querySelector(".middle-sec").textContent = "";
@@ -422,9 +423,8 @@ if (cart_items.length > 0) {
   document.querySelector(".price-details").classList.add("price-details1");
 }
 
-function addtocart(elm){
+function addtocart(elm) {
   document.querySelector(".after").classList.remove("afterr");
- 
 
   var id = elm.id;
   var bool = false;

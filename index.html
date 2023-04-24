@@ -40,10 +40,10 @@
         <hr style="margin-bottom: -18px" />
         <div id="child1">
           <div id="part1">
-            <img
+            <a href="index.html"><img
               src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"
               alt="logo"
-            />
+            /></a>
             <nav>
               <ul class="up-links">
                 <li><a href="#">Categories</a></li>
@@ -1365,19 +1365,19 @@
               <p><span class="through">₹80</span> <span>FREE</span></p>
             </div>
             <div>
-              <h3>You Pay</h3>
+              <h3 style="margin-top: -17px; margin-left: -10px;">You Pay</h3>
               <p class="payble"></p>
             </div>
           </div>
         </div>
       </div>
       <div class="bottom-part">
-        <div>
-            <h3>₹ <span class="grand-total"></span> </h3>
-         <p>Grand total</p>
+        <div  style="height: 50px;">
+            <h3 style="font-size: 18px; margin-top: -7px; margin-right: 10px;">₹ <span class="grand-total"></span> </h3>
+         <p style="margin-top: 3px;">Grand total</p>
         </div>
         <div>
-        <button id="proceed">Proceed</button>
+        <button style="margin-top: -5px; font-size: larger;" id="proceed">Proceed</button>
         <i class="fa-solid fa-arrow-right" style="color: #ebebf3;"></i>
         </div>
       </div>
@@ -2592,14 +2592,13 @@
 <script>
   var userData = JSON.parse(localStorage.getItem("user-data"));
   document.getElementById("proceed").addEventListener("click",func);
+  var  log  = localStorage.getItem("loggedin")
 
 function func(){
-  userData.map(function (el) {
-  if (el.hasOwnProperty("value")) {
-    window.location.href = "address.html"
-  }else{
-    window.location.href = "cartlog.html"
-  }
-});
+  if(log  === "true"){
+  window.location.href = "address.html"
+}else{
+  window.location.href = "cartlog.html"
+}
 }
 </script>

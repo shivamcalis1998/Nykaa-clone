@@ -180,6 +180,7 @@
       userdata.push(object);
       localStorage.setItem("user-data", JSON.stringify(userdata));
       window.location.href = "index.html";
+      localStorage.setItem("loggedin", "true");
     } else {
       error.innerText = "Please enter require Details";
     }

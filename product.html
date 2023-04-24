@@ -39,10 +39,10 @@
           <hr style="margin-bottom: -18px" />
           <div id="child1">
             <div id="part1">
-              <img
+              <a href="index.html"><img
                 src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"
                 alt="logo"
-              />
+              /></a>
               <nav>
                 <ul class="up-links">
                   <li><a href="#">Categories</a></li>
@@ -60,7 +60,7 @@
                 id="search"
                 placeholder="Search On Nykaa"
               />
-              <button id="button1">Sign in</button>
+              <a href="sign-in.html"><button id="button1">Sign in</button></a>
               <button id="addCart">
                 <div class="cart-symbol">
                   <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl non-empty" style="color: #292929;"></i>
@@ -973,7 +973,7 @@
                 </div>
               </li>
               <li>
-                <a href="#">Men</a>
+                <a href="mans.html">Men</a>
                 <div class="mega-box1">
                   <div class="content">
                     <div class="row">
@@ -1663,17 +1663,17 @@
   </script>
 
   <script src="navbar.js"></script>
-  <script>
-    var userData = JSON.parse(localStorage.getItem("user-data"));
-    document.getElementById("proceed").addEventListener("click",func);
-  
-  function func(){
-    userData.map(function (el) {
-    if (el.hasOwnProperty("value")) {
-      window.location.href = "address.html"
-    }else{
-      window.location.href = "cartlog.html"
-    }
-  });
-  }
-  </script>
+
+<script>
+  var userData = JSON.parse(localStorage.getItem("user-data"));
+  document.getElementById("proceed").addEventListener("click",func);
+  var  log  = localStorage.getItem("loggedin")
+
+function func(){
+  if(log  === "true"){
+  window.location.href = "address.html"
+}else{
+  window.location.href = "cartlog.html"
+}
+}
+</script>

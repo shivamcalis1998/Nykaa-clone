@@ -24,10 +24,10 @@
     <hr style="margin-bottom: -18px" />
     <div id="child1">
       <div id="part1">
-        <img
+        <a href="index.html"><img
           src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"
           alt="logo"
-        />
+        /></a>
         <nav>
           <ul class="up-links">
             <li><a href="#">Categories</a></li>
@@ -2012,14 +2012,13 @@
 <script>
   var userData = JSON.parse(localStorage.getItem("user-data"));
   document.getElementById("proceed").addEventListener("click",func);
+  var  log  = localStorage.getItem("loggedin")
 
 function func(){
-  userData.map(function (el) {
-  if (el.hasOwnProperty("value")) {
-    window.location.href = "address.html"
-  }else{
-    window.location.href = "cartlog.html"
-  }
-});
+  if(log  === "true"){
+  window.location.href = "address.html"
+}else{
+  window.location.href = "cartlog.html"
+}
 }
 </script>
