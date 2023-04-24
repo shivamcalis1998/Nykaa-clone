@@ -35,7 +35,9 @@ input {
 input:focus {
   width: 55%;
 }
-
+/* #parent{
+  z-index: 9;
+} */
 #part2 {
   display: flex;
   justify-content: center;
