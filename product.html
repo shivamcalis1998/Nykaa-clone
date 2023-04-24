@@ -32,6 +32,7 @@
     />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
         <div id="parent">
@@ -1373,7 +1374,7 @@
            <p>Grand total</p>
           </div>
           <div>
-         <a href="cart.html"> <button>Proceed</button></a>
+         <button id="proceed">Proceed</button>
           <i class="fa-solid fa-arrow-right" style="color: #ebebf3;"></i>
           </div>
         </div>
@@ -1426,21 +1427,21 @@
       <div id="container"></div>
     </div>
     <br />
-    <div id="container1">
+    <div id="contain">
       <div>
         <div style="display: flex; margin-bottom: 20px">
-          <img
-            src="D:\masai project\teamNakya\footer\Mail-logo.png"
-            alt="mail"
-          />
+          <img src="Mail-logo.png" alt="mail" />
           <span style="color: white">Get special discount on your inbox</span>
         </div>
         <div>
           <input
             style="
-              background-color: rgb(243, 244, 247);
+              background: transparent;
+              border: none;
+              border-bottom: solid 1px;
+
               height: 25px;
-              color: black;
+              color: white;
               margin-right: -10px;
             "
             type="email"
@@ -1451,31 +1452,17 @@
       </div>
       <div>
         <div style="display: flex">
-          <img
-            src="D:\masai project\teamNakya\footer\Phone.png"
-            alt="small phone"
-          />
+          <img src="Phone.png" alt="small phone" />
           <p style="color: white">EXPERIENCE THE NYKAA MOBILE APP</p>
         </div>
         <div style="display: flex">
-          <img
-            style="width: 35%"
-            src="D:\masai project\teamNakya\footer\Google_Play.png"
-            alt="`gogle play"
-          />
-          <img
-            style="width: 35%"
-            src="D:\masai project\teamNakya\footer\App_Store_Logo1.png"
-            alt="App Store"
-          />
+          <img style="width: 35%" src="Google_Play.png" alt="`gogle play" />
+          <img style="width: 35%" src="App_Store_Logo1.png" alt="App Store" />
         </div>
       </div>
       <div>
         <div style="display: flex">
-          <img
-            src="D:\masai project\teamNakya\footer\Call-ring.png"
-            alt="small phone ring"
-          />
+          <img src="Call-ring.png" alt="small phone ring" />
           <span style="color: white"
             >FOR ANY HELP YOU MAY CALL US AT<br />1800-267-4444</span
           >
@@ -1486,7 +1473,7 @@
       </div>
     </div>
 
-    <div id="container2">
+    <div id="contain2">
       <div>
         <i style="font-size: xx-large"><b>NYKAA</b></i>
         <p style="margin-top: 20px">Who are we?</p>
@@ -1676,3 +1663,17 @@
   </script>
 
   <script src="navbar.js"></script>
+  <script>
+    var userData = JSON.parse(localStorage.getItem("user-data"));
+    document.getElementById("proceed").addEventListener("click",func);
+  
+  function func(){
+    userData.map(function (el) {
+    if (el.hasOwnProperty("value")) {
+      window.location.href = "address.html"
+    }else{
+      window.location.href = "cartlog.html"
+    }
+  });
+  }
+  </script>
