@@ -32,16 +32,17 @@
     />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="product.css" />
+    <link rel="stylesheet" href="footer.css" />
   </head>
   <body>
         <div id="parent">
           <hr style="margin-bottom: -18px" />
           <div id="child1">
             <div id="part1">
-              <img
+              <a href="index.html"><img
                 src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/cosmetic-companies/nykaa-logo.png"
                 alt="logo"
-              />
+              /></a>
               <nav>
                 <ul class="up-links">
                   <li><a href="#">Categories</a></li>
@@ -59,7 +60,7 @@
                 id="search"
                 placeholder="Search On Nykaa"
               />
-              <button id="button1">Sign in</button>
+              <a href="sign-in.html"><button id="button1">Sign in</button></a>
               <button id="addCart">
                 <div class="cart-symbol">
                   <i class="fa-sharp fa-solid fa-cart-shopping fa-2xl non-empty" style="color: #292929;"></i>
@@ -972,7 +973,7 @@
                 </div>
               </li>
               <li>
-                <a href="#">Men</a>
+                <a href="mans.html">Men</a>
                 <div class="mega-box1">
                   <div class="content">
                     <div class="row">
@@ -1331,7 +1332,7 @@
         <div class="middle-part">
           <div class="sub-middle">
             <p>2000 reward points on new registration</p>
-            <button>Login/Register</button>
+            <a href="sign-in.html"> <button>Login/Register</button></a> 
           </div>
           <div  class="middle-sec">
             
@@ -1373,7 +1374,7 @@
            <p>Grand total</p>
           </div>
           <div>
-         <a href="cart.html"> <button>Proceed</button></a>
+         <button id="proceed">Proceed</button>
           <i class="fa-solid fa-arrow-right" style="color: #ebebf3;"></i>
           </div>
         </div>
@@ -1426,21 +1427,21 @@
       <div id="container"></div>
     </div>
     <br />
-    <div id="container1">
+    <div id="contain">
       <div>
         <div style="display: flex; margin-bottom: 20px">
-          <img
-            src="D:\masai project\teamNakya\footer\Mail-logo.png"
-            alt="mail"
-          />
+          <img src="Mail-logo.png" alt="mail" />
           <span style="color: white">Get special discount on your inbox</span>
         </div>
         <div>
           <input
             style="
-              background-color: rgb(243, 244, 247);
+              background: transparent;
+              border: none;
+              border-bottom: solid 1px;
+
               height: 25px;
-              color: black;
+              color: white;
               margin-right: -10px;
             "
             type="email"
@@ -1451,31 +1452,17 @@
       </div>
       <div>
         <div style="display: flex">
-          <img
-            src="D:\masai project\teamNakya\footer\Phone.png"
-            alt="small phone"
-          />
+          <img src="Phone.png" alt="small phone" />
           <p style="color: white">EXPERIENCE THE NYKAA MOBILE APP</p>
         </div>
         <div style="display: flex">
-          <img
-            style="width: 35%"
-            src="D:\masai project\teamNakya\footer\Google_Play.png"
-            alt="`gogle play"
-          />
-          <img
-            style="width: 35%"
-            src="D:\masai project\teamNakya\footer\App_Store_Logo1.png"
-            alt="App Store"
-          />
+          <img style="width: 35%" src="Google_Play.png" alt="`gogle play" />
+          <img style="width: 35%" src="App_Store_Logo1.png" alt="App Store" />
         </div>
       </div>
       <div>
         <div style="display: flex">
-          <img
-            src="D:\masai project\teamNakya\footer\Call-ring.png"
-            alt="small phone ring"
-          />
+          <img src="Call-ring.png" alt="small phone ring" />
           <span style="color: white"
             >FOR ANY HELP YOU MAY CALL US AT<br />1800-267-4444</span
           >
@@ -1486,7 +1473,7 @@
       </div>
     </div>
 
-    <div id="container2">
+    <div id="contain2">
       <div>
         <i style="font-size: xx-large"><b>NYKAA</b></i>
         <p style="margin-top: 20px">Who are we?</p>
@@ -1674,3 +1661,19 @@
       document.querySelector(".bag").classList.remove("bagshow");
     }
   </script>
+
+  <script src="navbar.js"></script>
+
+<script>
+  var userData = JSON.parse(localStorage.getItem("user-data"));
+  document.getElementById("proceed").addEventListener("click",func);
+  var  log  = localStorage.getItem("loggedin")
+
+function func(){
+  if(log  === "true"){
+  window.location.href = "address.html"
+}else{
+  window.location.href = "cartlog.html"
+}
+}
+</script>
