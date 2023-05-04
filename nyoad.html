@@ -1485,39 +1485,45 @@
     <div id="contain">
       <div>
         <div style="display: flex; margin-bottom: 20px">
-          <img src="Mail-logo.png" alt="mail" />
+          <img src="Mail-logo.png" alt="mail" height="20px" style="margin-top: 5px;"/>
           <span style="color: white">Get special discount on your inbox</span>
         </div>
-        <div>
+        <div style="display: grid; grid-template-columns: repeat(2,1fr);">
           <input
             style="
               background: transparent;
-              border: none;
+              /* border: none; */
               border-bottom: solid 1px;
-
               height: 25px;
               color: white;
-              margin-right: -10px;
+              margin-right: 10px;
+              width: 170%;
+              gap: 50px;
+              margin-left: 10px;
             "
             type="email"
             placeholder="Your Email"
           />
-          <input style="height: 30px" type="Submit" value="Send" />
+          <input style="padding: 10px; margin-top: 20px; width: 70px;" type="Submit" value="Send" />
         </div>
       </div>
       <div>
         <div style="display: flex">
-          <img src="Phone.png" alt="small phone" />
+          <img src="Phone.png" alt="small phone" height="30px" style="margin-top: 5px;"/>
           <p style="color: white">EXPERIENCE THE NYKAA MOBILE APP</p>
         </div>
-        <div style="display: flex">
-          <img style="width: 35%" src="Google_Play.png" alt="`gogle play" />
-          <img style="width: 35%" src="App_Store_Logo1.png" alt="App Store" />
+        <div style="display: flex;gap: 50px;" >
+          <a  href="https://play.google.com/store/apps/details?id=com.fsn.nykaa&hl=en_IN&gl=US">
+            <img style="width: 140%" src="Google_Play.png" alt="`gogle play" />
+          </a>
+          <a  href="https://apps.apple.com/in/app/nykaa-makeup-beauty-shopping/id1022363908">
+            <img style="width: 140%" src="App_Store_Logo1.png" alt="App Store" />
+          </a>
         </div>
       </div>
       <div>
         <div style="display: flex">
-          <img src="Call-ring.png" alt="small phone ring" />
+          <img src="Call-ring.png" alt="small phone ring" height="30px" style="margin-top: 5px;"/>
           <span style="color: white"
             >FOR ANY HELP YOU MAY CALL US AT<br />1800-267-4444</span
           >
