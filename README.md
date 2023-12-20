@@ -44,5 +44,5 @@ Meet the talented individuals behind this project:
 Follow these steps to set up the NYKAA clone website locally:
 
 ```bash
-git clone https://github.com/your-username/nykaa-clone.git
+git clone [https://github.com/your-username/nykaa-clone.git](https://github.com/shivamcalis1998/Nykaa-clone.git)https://github.com/shivamcalis1998/Nykaa-clone.git
 cd nykaa-clone
